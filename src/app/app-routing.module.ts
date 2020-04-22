@@ -9,7 +9,7 @@ import { SuppliersComponent } from './suppliers/suppliers.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'payment', component: PaymentComponent },
+  { path: 'payments', component: PaymentComponent },
   { path: 'suppliers', component: SuppliersComponent },
   { path: 'home', component: HomeComponent }
 ];
