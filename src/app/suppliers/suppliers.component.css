@@ -1,11 +1,54 @@
 main {
-    padding: 10px;
+    padding: 20px;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .suppliers-overview {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.tile-title {
+    font-weight: 600;
+    text-align: center;
+}
+
+.tile-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-icon {
+    height: 15px;
+}
+
+.card { 
+    border: solid 1px #1ed2c5;
+    box-shadow: none;
+    width: calc((100% - 80px)/ 4);
+    margin: 0 0 20px;
+    min-width: 200px;
+}
+  
+.from-last-month {
+    color: #999999;
+    font-family: Lato;
+    font-size: 11px;
+    text-align: center;
+}
+
+.body-text {
+    font-family: Lato;
+    font-size: 18px;
 }
 
 .overview-tiles {
@@ -19,7 +62,7 @@ main {
 }
 
 .yellow {
-    color: yellow;
+    color: #dada07e0;
 }
 
 .green {
@@ -58,7 +101,7 @@ main {
 
 .clickable {
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 0 10px;
     color: #333c4b;
 }
 
@@ -90,7 +133,7 @@ main {
 
 .information {
     flex: 3;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 ::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
@@ -103,18 +146,35 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 75%;
+    width: 90%;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .company-details {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 20px;
+    padding: 10px 20px;
+}
+
+.info-container {
+    padding: 0 40px;
 }
 
 .user-pic {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50px;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

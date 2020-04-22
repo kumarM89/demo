@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TitleService } from '../title.service';
 
 @Component({
   selector: 'app-suppliers',
@@ -24,9 +25,10 @@ export class SuppliersComponent implements OnInit {
     {name: 'Lowe\'s', email: 'mark.ellison@lowes.com', contact: '7047581000', logo: 'lowes', location: 'Lowe\'s Blvd Rd, Gaston, NC 27831, USA' },
   ]
 
-  constructor() { }
+  constructor(private titleService: TitleService) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle("Suppliers")
   }
 
 }

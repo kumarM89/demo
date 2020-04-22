@@ -1,28 +1,28 @@
 <main>
-    <h1 class="overview">Overview</h1>
-    <div class="suppliers-overview">
-        <mat-card class="overview-tiles" *ngFor="let tile of overviewTiles">
-            <mat-card-title class="content-lg text-center">
-                {{tile.title}}
+    <div class="card-container">
+        <mat-card class="card"  *ngFor="let tile of overviewTiles">
+            <mat-card-title>
+                <h3 class="mat-h3 tile-title">{{tile.title}}</h3>
             </mat-card-title>
-            <mat-card-content class="content-sm tile-content">
-                <div class="tile-content-value">
+            <mat-card-content>
+                <div class="tile-card-body">
+                    <!-- <img class='arrow-icon' src="assets/images/arrow-up-green.svg"> -->
                     <mat-icon aria-hidden="false" class="{{tile.color}}">{{tile.icon}}</mat-icon>
-                    <span>{{tile.value}}</span>
+                    <p class="{{tile.color}} body-text">{{tile.value}}</p>
                 </div>
-                <div class="text-center">{{tile.percent}} % From Last Month</div>
+                <p class="from-last-month">{{tile.percent}}% From Last Month</p>
             </mat-card-content>
         </mat-card>
     </div>
-    <br>
+
     <div class="suppliers-view">
         <mat-card>
             <mat-card-title>
                 
             </mat-card-title>
             <mat-card-content>
-                <mat-icon aria-hidden="false" (click)="view='grid'" class="clickable">dashboard</mat-icon>
-                <mat-icon aria-hidden="false" (click)="view='list'" class="clickable">list</mat-icon>
+                <mat-icon title="Grid view" aria-labelledby="Grid view" aria-hidden="false" (click)="view='grid'" class="clickable content-lg">dashboard</mat-icon>
+                <mat-icon title="List view" aria-hidden="false" (click)="view='list'" class="clickable content-lg">list</mat-icon>
                 <div class="suppliers-data">
                     <div class="view" *ngIf="view === 'grid'">
                         <mat-grid-list cols="3" rowHeight="2:1">
@@ -32,14 +32,14 @@
                                         <img src="assets/images/{{supplier.logo}}.png" class="supplier-icon" />
                                     </mat-card-title>
                                     <mat-card-content class="text-center">
-                                        <div class="content-sm">{{supplier.name}}</div>
+                                        <div class="content-sm"><b>{{supplier.name}}</b></div>
                                         <div class="tile-content-value content-xs">
-                                            <mat-icon aria-hidden="false" class="content-lg">email</mat-icon>
-                                            <span>{{supplier.email}}</span>
+                                            <mat-icon aria-hidden="false" class="center content-xs">email</mat-icon>
+                                            <span class="content-xs">{{supplier.email}}</span>
                                         </div>
                                         <div class="tile-content-value content-xs">
-                                            <mat-icon aria-hidden="false" class="content-lg">phone</mat-icon>
-                                            <span>{{supplier.contact}}</span>
+                                            <mat-icon aria-hidden="false" class="center content-xs">phone</mat-icon>
+                                            <span class="content-xs">{{supplier.contact}}</span>
                                         </div>
                                     </mat-card-content>
                                 </mat-card>
@@ -78,25 +78,68 @@
                             <mat-tab label="Company">
                                 <div class="company-details">
                                     <div>
-                                        <img src="assets/images/user.png" class="user-pic" />
+                                        <img src="assets/images/User.png" class="user-pic" />
                                     </div>
-                                    <div>
+                                    <div style="line-height: 1;">
                                         <div class="content-sm">
-                                            <mat-icon aria-hidden="false" class="content-xs" class="red">location_on</mat-icon>
+                                            <mat-icon aria-hidden="false" class="content-xs red">location_on</mat-icon>
                                             <span></span>
                                         </div>
                                         <div class="content-sm">
-                                            <mat-icon aria-hidden="false" class="content-xs" class="green">trip_origin</mat-icon>
-                                            <span>Validated</span>
+                                            <mat-icon aria-hidden="false" class="content-xs green">trip_origin</mat-icon>
+                                            <span class="content-sm">Validated</span>
                                         </div>
                                         <div class="content-sm">
                                             <mat-icon aria-hidden="false" class="content-sm">phone</mat-icon>
-                                            <span>892-134-1515</span>
+                                            <span class="content-sm">892-134-1515</span>
                                         </div>
                                     </div>
                                 </div>
+                                <mat-divider></mat-divider>
+                                <h4 class="text-center"><b>Payee Information</b></h4>
+                                <div class="info-container">
+                                    <div class="info-header">
+                                        <div class="content-sm">Payee ID:</div>
+                                        <div class="content-sm">WM005000</div>
+                                    </div>
+                                    <div class="info-header">
+                                        <div class="content-sm">Payment Type:</div>
+                                        <div class="content-sm">Paper Cheque</div>
+                                    </div>
+                                    <div class="info-header">
+                                        <div class="content-sm">Campaign Status:</div>
+                                        <div class="content-sm">Initiated</div>
+                                    </div>
+                                    <div class="info-header">
+                                        <div class="content-sm">Email Address:</div>
+                                        <div class="content-sm">kantihadiyal@gmail.com</div>
+                                    </div>
+                                </div>
                             </mat-tab>
-                            <mat-tab label="Contact"> contact details </mat-tab>
+                            <mat-tab label="Contact">
+                                <mat-card>
+                                    <mat-card-title class="text-center no-margin">
+                                        <img src="assets/images/User.png" class="user-pic" />
+                                    </mat-card-title>
+                                    <mat-card-content>
+                                        <div class="tile-content-value content-xs">Emma Jacob</div>
+                                        <div class="tile-content-value content-xs">CEO</div>
+                                        <div class="tile-content-value content-xs">Others</div>
+                                        <div class="tile-content-value content-xs">
+                                            <mat-icon aria-hidden="false" class="center content-xs">email</mat-icon>
+                                            <span class="content-xs">emma@acme.com</span>
+                                        </div>
+                                        <div class="tile-content-value content-xs">
+                                            <mat-icon aria-hidden="false" class="center content-xs">phone</mat-icon>
+                                            <span class="content-xs">888-888-8888</span>
+                                        </div>
+                                        <div class="tile-content-value content-xs">
+                                            <mat-icon aria-hidden="false" class="center content-xs">location_on</mat-icon>
+                                            <span class="content-xs">154 Summit St, Newark, NJ 07102, USA</span>
+                                        </div>
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-tab>
                             <mat-tab label="Location"> location details </mat-tab>
                             <mat-tab label="Payment"> payment details </mat-tab>
                         </mat-tab-group>
