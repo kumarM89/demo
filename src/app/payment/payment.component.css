@@ -170,6 +170,22 @@
   width: calc((100% - 80px)/ 4);
   margin: 0 0 20px;
   min-width: 200px;
+  cursor: pointer;
+}
+
+
+.card:hover::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -21px;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-bottom: 18px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
 }
 
 .body-text {
@@ -186,6 +202,7 @@
 
 .arrow-icon {
   height: 15px;
+  margin-right: 5px;
 }
 
 .from-last-month {
@@ -193,6 +210,24 @@
   font-family: Lato;
   font-size: 11px;
 }
+
+
+.card:hover {
+  background-color: #4bb8b0;
+}
+
+.card:hover {
+  color: #fff;
+}
+
+.card:hover .body-text {
+  color: #fff;
+}
+
+.card:hover .from-last-month {
+  color: #fff;
+}
+
 
 table {
     width: 100%;
