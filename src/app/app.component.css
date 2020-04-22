@@ -95,6 +95,7 @@ a.active {
 .header {
     display: flex;
     justify-content: space-between;
+    height: 54px;
 }
 .page-title {
     font-size: 2em;
@@ -112,6 +113,10 @@ a.active {
 }
 .toolbar-content {
     font-size: 16px;
+}
+
+.sub-item {
+    padding-left: 20px !important;
 }
 
 .icon-margin {

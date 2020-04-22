@@ -14,6 +14,7 @@
         <mat-list-item role="listitem" (click)="menuClicked(listItem)" class="side-nav-item"
           *ngIf="!listItem.parent || listItem.isVisible">
           <a matLine routerLink="/{{listItem.link}}" routerLinkActive="active"
+            [ngClass]="{'sub-item': listItem.parent}"
             [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
             <mat-icon matListIcon class="nav-icon center">{{listItem.icon}}</mat-icon>
             <span class="content-sm">{{listItem.title}}</span>
