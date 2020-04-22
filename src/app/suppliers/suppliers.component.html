@@ -1,0 +1,108 @@
+<main>
+    <h1 class="overview">Overview</h1>
+    <div class="suppliers-overview">
+        <mat-card class="overview-tiles" *ngFor="let tile of overviewTiles">
+            <mat-card-title class="content-lg text-center">
+                {{tile.title}}
+            </mat-card-title>
+            <mat-card-content class="content-sm tile-content">
+                <div class="tile-content-value">
+                    <mat-icon aria-hidden="false" class="{{tile.color}}">{{tile.icon}}</mat-icon>
+                    <span>{{tile.value}}</span>
+                </div>
+                <div class="text-center">{{tile.percent}} % From Last Month</div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <br>
+    <div class="suppliers-view">
+        <mat-card>
+            <mat-card-title>
+                
+            </mat-card-title>
+            <mat-card-content>
+                <mat-icon aria-hidden="false" (click)="view='grid'" class="clickable">dashboard</mat-icon>
+                <mat-icon aria-hidden="false" (click)="view='list'" class="clickable">list</mat-icon>
+                <div class="suppliers-data">
+                    <div class="view" *ngIf="view === 'grid'">
+                        <mat-grid-list cols="3" rowHeight="2:1">
+                            <mat-grid-tile *ngFor="let supplier of gridViewData">
+                                <mat-card class="card-details">
+                                    <mat-card-title class="text-center no-margin">
+                                        <img src="assets/images/{{supplier.logo}}.png" class="supplier-icon" />
+                                    </mat-card-title>
+                                    <mat-card-content class="text-center">
+                                        <div class="content-sm">{{supplier.name}}</div>
+                                        <div class="tile-content-value content-xs">
+                                            <mat-icon aria-hidden="false" class="content-lg">email</mat-icon>
+                                            <span>{{supplier.email}}</span>
+                                        </div>
+                                        <div class="tile-content-value content-xs">
+                                            <mat-icon aria-hidden="false" class="content-lg">phone</mat-icon>
+                                            <span>{{supplier.contact}}</span>
+                                        </div>
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </div>
+                    <div class="view" *ngIf="view === 'list'">
+                        <table mat-table [dataSource]="gridViewData" class="mat-elevation-z8" class="suppliers-table">
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef class="content-md"> Name </th>
+                                <td mat-cell *matCellDef="let element" class="content-xs"> {{element.name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="email">
+                                <th mat-header-cell *matHeaderCellDef class="content-md"> Email </th>
+                                <td mat-cell *matCellDef="let element" class="content-xs"> {{element.email}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="contact">
+                                <th mat-header-cell *matHeaderCellDef class="content-md"> Phone </th>
+                                <td mat-cell *matCellDef="let element" class="content-xs"> {{element.contact}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="location">
+                                <th mat-header-cell *matHeaderCellDef class="content-md"> Location </th>
+                                <td mat-cell *matCellDef="let element" class="content-xs"> {{element.location}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="data-row"></tr>
+                        </table>
+                    </div>
+                    <mat-divider [vertical]="true" [ngStyle]="{'height':'250px'}"></mat-divider>
+                    <div class="information">
+                        <mat-tab-group>
+                            <mat-tab label="Company">
+                                <div class="company-details">
+                                    <div>
+                                        <img src="assets/images/user.png" class="user-pic" />
+                                    </div>
+                                    <div>
+                                        <div class="content-sm">
+                                            <mat-icon aria-hidden="false" class="content-xs" class="red">location_on</mat-icon>
+                                            <span></span>
+                                        </div>
+                                        <div class="content-sm">
+                                            <mat-icon aria-hidden="false" class="content-xs" class="green">trip_origin</mat-icon>
+                                            <span>Validated</span>
+                                        </div>
+                                        <div class="content-sm">
+                                            <mat-icon aria-hidden="false" class="content-sm">phone</mat-icon>
+                                            <span>892-134-1515</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Contact"> contact details </mat-tab>
+                            <mat-tab label="Location"> location details </mat-tab>
+                            <mat-tab label="Payment"> payment details </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</main>

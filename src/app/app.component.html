@@ -1,0 +1,59 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav mode="side" opened class="side-nav">
+    <img src="assets/images/incedo-pay.svg" class="logo" />
+    <div class="user-details">
+      <img src="assets/images/user.png" width="40" class="user-img" />
+      <div>
+        <div class="username">Username</div>
+        <div class="logout">Logout</div>
+      </div>
+    </div>
+
+    <mat-list role="list">
+      <mat-list-item role="listitem" class="side-nav-item" *ngFor="let shoe of typesOfShoes">
+        <a matLine href="" class="nav-link">
+          <mat-icon matListIcon class="nav-icon">folder</mat-icon> 
+          {{shoe}}
+        </a>
+      </mat-list-item>
+    </mat-list>
+
+    <!-- <mat-toolbar class="side-nav-links">
+      <mat-toolbar-row class="noPadding">
+        <div class="side-nav-item">
+          <a mat-button routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            title="Home">
+            <mat-icon svgIcon="navigation-placeholder"></mat-icon>
+            <span class="nav-text">Home</span>
+          </a>
+        </div>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row class="noPadding">
+        <div class="side-nav-item">
+          <a mat-button routerLink="/payment" routerLinkActive="active" title="Payment Dashboard">
+            <mat-icon svgIcon="navigation-placeholder"></mat-icon>
+            <span class="nav-text">Payment Dashboard</span>
+          </a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar> -->
+  </mat-sidenav>
+  <mat-sidenav-content class="main-content">
+    <mat-toolbar class="header shadow bg-white">
+      <div class="page-title">{{title}}</div>
+      <div class="toolbar-content">
+        <mat-form-field style="font-size: 14px;">
+          <mat-label>Date Duration</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let date of dateValues" [value]="date.value">
+              {{date.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-icon svgIcon="notification-received" class="icon-margin"></mat-icon>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

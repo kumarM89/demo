@@ -1,0 +1,17 @@
+.container{
+    margin: 1.5vw;
+}
+.chartDiv{
+    width: 100%; 
+    height: 300px; 
+    display: block;
+}
+.overview {
+    font-size: 22px;
+    line-height: 27px;
+    text-align: left;
+}
+.box-title {
+    font-size: 19px;
+    font-weight: 900;
+}

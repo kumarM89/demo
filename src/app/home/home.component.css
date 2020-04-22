@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    margin: 55px;
+    justify-content: space-between;
+}
+.container-2-box{
+    flex-basis: 30%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  
+  .flex-container > div {
+    width: 48%;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom:30px
+  }
+  .flex-chart {
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+  }
+  .flex-chart .mat-card-header-text {
+    width: 100%;
+  }
+  .flex-chart mat-card-title {
+    width: 45%;
+    float: left;
+  }
+  .flex-supplierInner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  .flex-supplierInner > div {
+    width: 45%;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom:30px
+  }
+.flex-supplier {
+    display: flex;
+    flex-direction: column;
+}
+.flex-supplier > div {
+    width: 46%;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .flex-supplier > mat-card {
+    margin-bottom: 20px;
+  }
+
+.box-title {
+    font-size: 19px;
+    font-weight: 900;
+}
+
+.box-border-right {
+    border-right: 1px solid black;
+}
+.box-green-text {
+    color: #4BB8B0;
+    font-size: 22px;
+    line-height: 37px;
+}
+.chart-title {
+    font-size: 17px;
+    font-weight: bold;
+}

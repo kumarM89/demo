@@ -1,0 +1,135 @@
+<div class="flex-container">
+    <div class="flex-supplier">
+        <mat-card >
+            <mat-card-content class="flex-supplierInner">
+                <div class="text-center box-border-right">
+                    <span class="box-title">Payment</span><br>
+                    <span class="box-green-text">100</span>
+                </div>
+                <div class="text-center">
+                    <span class="box-title">Total (USD)</span><br>
+                    <span class="box-green-text">50,000</span>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card >
+            <mat-card-content class="flex-supplierInner">
+                <div class="text-center box-border-right">
+                    <span class="box-title">Payment</span><br>
+                    <span class="box-green-text">100</span>
+                </div>
+                <div class="text-center">
+                    <span class="box-title">Total (USD)</span><br>
+                    <span class="box-green-text">50,000</span>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card >
+            <mat-card-content>
+                <div class="text-center">
+                    <span class="box-title">Supplier Profiles</span><br>
+                    <span class="box-green-text">10</span>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+    <div>
+        <mat-card>
+            <mat-card-header class="flex-chart">
+                <mat-card-title class="box-title">{{cardHeader}}</mat-card-title>
+                <mat-card-title>
+                    <mat-slide-toggle
+                        [color]="color"
+                        [checked]="checked"
+                        (change)="testChange($event)">
+                        View
+                     </mat-slide-toggle>
+                </mat-card-title>
+             
+            </mat-card-header>
+            <mat-card-content >
+                <app-amount-per-pay-type 
+                    *ngIf="!checked"
+                    class="no-border"
+                    [cardHeader]="">
+                </app-amount-per-pay-type>
+                <app-payment-vol 
+                    *ngIf="checked"
+                    class="no-border"
+                    [cardHeader]="">
+                </app-payment-vol>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div>
+        <app-supplier-activation></app-supplier-activation>
+    </div>  
+    <div>
+        <app-campaign-progress></app-campaign-progress>
+    </div>
+    
+  </div>
+
+<!-- <div style="display: flex;">
+    <div style="flex: 1;">
+        <div class="container" style="flex-wrap: wrap;flex-direction:column">
+            <div class="container-2-box" >
+                <mat-card >
+                    <mat-card-content style="display: flex;padding:0.5em;font-size:20px;">
+                        <div style="flex: 1;text-align:center;border-right:2px solid black">
+                            <b>Payments</b>
+                            <p style="margin-top: 10px;color:'#4BB8B0'">100</p>
+                        </div>
+                        <div style="flex: 1;text-align:center">
+                            <b>Total (USD)</b>
+                            <p style="margin-top: 10px;color:'#4BB8B0'">$50,000</p>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="container-2-box">
+                <mat-card >
+                    <mat-card-content style="display: flex;padding:0.5em;font-size:20px">
+                        <div style="flex: 1;text-align:center;border-right:2px solid black">
+                            <b>Files</b>
+                            <p style="margin-top: 10px;color:'#4BB8B0'">10</p>
+                        </div>
+                        <div style="flex: 1;text-align:center">
+                            <b>Total (USD)</b>
+                            <p style="margin-top: 10px;color:'#4BB8B0'">$540,000</p>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="container-2-box">
+                <mat-card >
+                    <mat-card-content style="display: flex;padding:0.5em;font-size:20px">
+                        <div style="flex: 1;text-align:center;">
+                            <b>Supplier Profiles</b>
+                            <p style="margin-top: 10px;color:'#4BB8B0'">10</p>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <div style="flex: 1;">
+            
+        
+    </div>
+</div>
+
+<div style="display: flex;">
+    <div style="flex: 1;">
+        <app-supplier-activation></app-supplier-activation>
+    </div>
+    <div style="flex: 1;">
+        <app-campaign-progress></app-campaign-progress>
+    </div>
+</div> -->
+ 
+
+<!-- <app-campaign-completion></app-campaign-completion> -->

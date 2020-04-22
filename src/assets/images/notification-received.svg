@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 64 (101010) - https://sketch.com -->
+    <title>BE1417E1-33A6-4FA9-9650-B6CD4C6AADEC</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Incedo-Pay---Dashboard-(Home)" transform="translate(-1382.000000, -22.000000)">
+            <g id="icon/share-green" transform="translate(1380.000000, 22.000000)">
+                <g id="Bell" transform="translate(2.500000, 2.250000)">
+                    <path d="M9.5,0.5 C7.92749217,0.5 6.49629528,1.10492833 5.42415936,2.09459225 C4.34666717,3.08920043 3.63149715,4.472252 3.5,6.02077224 L3.5,11.118034 L0.809016994,16.5 L18.1909227,16.5 L15.5004459,11.1199432 L15.4811792,6.02093744 C15.3590403,4.47310522 14.6492461,3.09066792 13.5751987,2.09623813 C12.5051376,1.1054991 11.0732726,0.5 9.5,0.5 Z" id="Combined-Shape" stroke="#979797"></path>
+                    <path d="M9.5,0.5 C7.92749217,0.5 6.49629528,1.10492833 5.42415936,2.09459225 C4.34666717,3.08920043 3.63149715,4.472252 3.5,6.02077224 L3.5,11.118034 L0.809016994,16.5 L18.1909227,16.5 L15.5004459,11.1199432 L15.4811792,6.02093744 C15.3590403,4.47310522 14.6492461,3.09066792 13.5751987,2.09623813 C12.5051376,1.1054991 11.0732726,0.5 9.5,0.5 Z" id="Combined-Shape" stroke="#1F263E"></path>
+                </g>
+                <g id="Notification" transform="translate(11.000000, 0.000000)">
+                    <circle id="Oval" fill="#D93E30" cx="6.5" cy="6.5" r="6.5"></circle>
+                    <text id="1" font-family="Lato-Bold, Lato" font-size="9" font-weight="bold" letter-spacing="0.423913173" fill="#FFFFFF">
+                        <tspan x="3.67804341" y="9.5">1</tspan>
+                    </text>
+                </g>
+                <g id="Notification" transform="translate(11.000000, 0.000000)">
+                    <circle id="Oval" fill="#D93E30" cx="6.5" cy="6.5" r="6.5"></circle>
+                    <text id="1" font-family="Lato-Bold, Lato" font-size="10" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="3.6" y="10">1</tspan>
+                    </text>
+                </g>
+                <path d="M12,21.5010431 C10.5133562,21.5010431 9.27927644,20.4196879 9.04140927,19.000626 L14.9585907,19.000626 C14.7207236,20.4196879 13.4866438,21.5010431 12,21.5010431 Z M13.938,19 L12.4984054,19.0040823 L10.064,19 L10.0846781,19.0786696 C10.3187555,19.8559031 11.012994,20.433751 11.8507377,20.4955574 L12,20.5010431 C12.9037387,20.5010431 13.6674752,19.9016227 13.9154064,19.0882893 L13.938,19 Z" id="Combined-Shape" fill="#1F263E" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

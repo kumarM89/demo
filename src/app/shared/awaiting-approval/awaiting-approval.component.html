@@ -1,0 +1,24 @@
+<div class="container">
+    <div  style="flex: 1;">
+        <mat-card >
+            <mat-card-header>
+              <mat-card-title><b>Awaiting Approvals</b></mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="m10">
+                <div class="container singleDiv" *ngFor="let approval of approveData">
+                    <div style="flex: 1;">
+                        <h3><strong>{{approval.name}}</strong></h3>
+                    </div>
+                    <div style="flex: 1;text-align:center">
+                        <span class="txtColor">{{approval.rs}}</span>
+                        <p class="dollarClr">{{approval.dl}}</p>
+                    </div>
+                    <div style="flex: 1;text-align:right">
+                        <button mat-flat-button color="seagreen">PROCESS APPROVALS</button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
