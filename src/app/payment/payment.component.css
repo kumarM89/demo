@@ -174,7 +174,7 @@
 }
 
 
-.card:hover::after {
+.selected::after {
     content:'';
     position: absolute;
     left: 0;
@@ -212,19 +212,12 @@
 }
 
 
-.card:hover {
+.card:hover, .selected {
   background-color: #4bb8b0;
+  color: #fff
 }
 
-.card:hover {
-  color: #fff;
-}
-
-.card:hover .body-text {
-  color: #fff;
-}
-
-.card:hover .from-last-month {
+.selected .body-text, .selected .from-last-month, .card:hover .body-text, .card:hover .from-last-month {
   color: #fff;
 }
 

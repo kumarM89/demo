@@ -21,13 +21,15 @@
                 
             </mat-card-title>
             <mat-card-content>
-                <mat-icon title="Grid view" aria-labelledby="Grid view" aria-hidden="false" (click)="view='grid'" class="clickable content-lg">dashboard</mat-icon>
+                <mat-icon title="Grid view" aria-hidden="false" (click)="view='grid'" class="clickable content-lg">dashboard</mat-icon>
                 <mat-icon title="List view" aria-hidden="false" (click)="view='list'" class="clickable content-lg">list</mat-icon>
+                <mat-icon title="Search" aria-hidden="false" class="clickable content-lg right">search</mat-icon>
+                <mat-icon title="Filter" aria-hidden="false" class="clickable content-lg right">filter_list</mat-icon>
                 <div class="suppliers-data">
                     <div class="view" *ngIf="view === 'grid'">
                         <mat-grid-list cols="3" rowHeight="2:1">
                             <mat-grid-tile *ngFor="let supplier of gridViewData">
-                                <mat-card class="card-details">
+                                <mat-card class="card-details" [ngClass]="{'selected': supplier.isSelected}">
                                     <mat-card-title class="text-center no-margin">
                                         <img src="assets/images/{{supplier.logo}}.png" class="supplier-icon" />
                                     </mat-card-title>
@@ -69,7 +71,10 @@
                             </ng-container>
 
                             <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
-                            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="data-row"></tr>
+                            <tr mat-row class="data-row"
+                                *matRowDef="let row; columns: displayedColumns;"
+                                [ngClass]="{'selected': row.isSelected}"
+                            ></tr>
                         </table>
                     </div>
                     <mat-divider [vertical]="true" [ngStyle]="{'height':'250px'}"></mat-divider>
