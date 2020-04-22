@@ -15,6 +15,10 @@
     border-radius: 50px;
 }
 
+.mat-h1 {
+    font-weight: 600;
+}
+
 .user-details {
     background-color: #666c78;
     display: flex;
@@ -95,8 +99,8 @@ a.active {
     justify-content: space-between;
 }
 .page-title {
+    font-size: 2em;
     font-weight: bold;
-    font-size: 24px;
 }
 .shadow {
     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;

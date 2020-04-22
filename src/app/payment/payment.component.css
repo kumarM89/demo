@@ -45,10 +45,12 @@
     justify-content: space-between;
     align-items: center;
 }
-.overview {
-    font-size: 22px;
-    line-height: 27px;
+
+.payment-tile-title {
+  font-weight: 600;
+  text-align: center;
 }
+
 .data-visualizations {
     display: flex;
     flex-direction: column;
@@ -154,9 +156,36 @@
     color: #E03616;
 }
 
-.pay-amt {
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card { 
+  border: solid 1px #1ed2c5;
+  box-shadow: none;
+  width: calc((100% - 80px)/ 4);
+  margin: 0 0 20px;
+  min-width: 200px;
+}
+
+.body-text {
   font-family: Lato;
-  font-size: 22px
+  font-size: 18px;
+}
+
+.tile-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.arrow-icon {
+  height: 15px;
 }
 
 .from-last-month {
@@ -170,7 +199,7 @@ table {
 }
 
 .table-style {
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 table {

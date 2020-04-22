@@ -3,4 +3,12 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
 
 html, body { height: 100%;}
-body, * { margin: 0; font-family: Lato, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Lato, "Helvetica Neue", sans-serif;}
+* {
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, span {
+    margin: 0 !important;
+    padding: 0 !important;
+}

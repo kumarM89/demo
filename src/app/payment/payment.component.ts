@@ -50,7 +50,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class PaymentComponent implements OnInit {
 
-  title = "Payment Dashboard";
+  title = "Payments";
   constructor(private titleService: TitleService) { }
 
   highcharts;
