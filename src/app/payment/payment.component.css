@@ -234,7 +234,7 @@ table {
 }
 
 .table-style {
-    padding: 30px;
+    padding: 0 20px 20px;
 }
 
 table {
@@ -258,6 +258,7 @@ table {
     background: #f2f6fa;
     border-bottom-width: 0;
   }
+
   
   .example-element-detail {
     overflow: hidden;
@@ -296,7 +297,6 @@ table {
     align-items: center;
     border: solid 1px #ddd;
     border-bottom: none;
-    padding: 0 20px;
 }
 
 .example-element-description {
@@ -329,13 +329,13 @@ table {
 
 .remittance-box {
   width: 50%;
-  padding: 30px;
+  padding: 15px;
   border-left:solid 1px #ddd;
 }
 
 .payment-info-box {
   width: 50%;
-  padding: 30px;
+  padding: 15px;
 }
 
 .inner-box-container {
@@ -348,9 +348,20 @@ table {
   color: #999999;
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 20px !important;
+  margin-bottom: 15px !important;
 }
 
+.stepper-container {
+  height: 102px;
+}
+
+.mat-label {
+  padding: 1px 0 0 !important;
+}
+
+.mat-horizontal-stepper-header {
+  padding: 20px !important;
+}
 .inner-box {
   width: 50%;
 }
@@ -377,7 +388,7 @@ table {
 }
 .inner-box-button {
     display: block;
-    margin: 20px auto 0;
+    margin: 15px auto 0;
     min-width: 200px;
     color: #4bb8b0;
     border: solid 1px #4bb8b0;

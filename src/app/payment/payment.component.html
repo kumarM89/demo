@@ -64,11 +64,11 @@
                 <div class="example-element-detail"
                     [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
                     <div class="example-element-description">
-                        <div class="status-container">
+                        <div class="status-container" style="padding: 0 15px;">
                             <p>Status</p>
                             <div>
-                                <mat-horizontal-stepper labelPosition="bottom" #stepper>
-                                    <mat-step>
+                                <mat-horizontal-stepper class='stepper-container' labelPosition="bottom" #stepper>
+                                    <mat-step class='mat-label'>
                                         <ng-template matStepLabel>Payment Initiated</ng-template>
                                     </mat-step>
                                     <mat-step>
