@@ -53,60 +53,101 @@
         </mat-card>
     </div>
 
-    <mat-card>
-        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 table-style">
-            <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
-                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-            </ng-container>
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 table-style">
+        <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+            <th class="table-header-title" mat-header-cell *matHeaderCellDef> {{column}} </th>
+            <td class="table-row-title" mat-cell *matCellDef="let element"> {{element[column]}} </td>
+        </ng-container>
 
-            <ng-container matColumnDef="expandedDetail">
-                <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
-                    <div class="example-element-detail"
-                        [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-                        <div class="example-element-description">
-                            <div class="status-container">
-                                <p>Status</p>
-                                <div>
-                                    <mat-horizontal-stepper labelPosition="bottom" #stepper>
-                                        <mat-step>
-                                            <ng-template matStepLabel>Payment Initiated</ng-template>
-                                        </mat-step>
-                                        <mat-step>
-                                            <ng-template matStepLabel>Payment Processed</ng-template>
-                                        </mat-step>
-                                        <mat-step>
-                                            <ng-template matStepLabel>ACH Disbursed</ng-template>
-                                        </mat-step>
-                                        <mat-step>
-                                            <ng-template matStepLabel>ACH Accepted</ng-template>
-                                        </mat-step>
-                                        <mat-step>
-                                            <ng-template matStepLabel>ACH Returned</ng-template>
-                                        </mat-step>
-                                    </mat-horizontal-stepper>
+        <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+                <div class="example-element-detail"
+                    [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                    <div class="example-element-description">
+                        <div class="status-container">
+                            <p>Status</p>
+                            <div>
+                                <mat-horizontal-stepper labelPosition="bottom" #stepper>
+                                    <mat-step>
+                                        <ng-template matStepLabel>Payment Initiated</ng-template>
+                                    </mat-step>
+                                    <mat-step>
+                                        <ng-template matStepLabel>Payment Processed</ng-template>
+                                    </mat-step>
+                                    <mat-step>
+                                        <ng-template matStepLabel>ACH Disbursed</ng-template>
+                                    </mat-step>
+                                    <mat-step>
+                                        <ng-template matStepLabel>ACH Accepted</ng-template>
+                                    </mat-step>
+                                    <mat-step>
+                                        <ng-template matStepLabel>ACH Returned</ng-template>
+                                    </mat-step>
+                                </mat-horizontal-stepper>
 
-                                </div>
                             </div>
-                            <div class="status-container padded-box">
-                                <p>Payment information</p>
-                                <p>Payment type: <span>ACH</span></p>
-                                <p>payment refrence: <span>10042011</span></p>
-                                <p>File ID: <span>53001</span></p>
-                                <p>Vendor ID: <span>10042011</span></p>
-                                <p>Currency: <span>USD</span></p>
-                                <!-- <button mat-stroked-button color="primary">cancel payment</button> -->
+                        </div>
+                        <div class="status-container">
+                            <div class="payment-info-box">
+                                <p class="iiner-box-title">Payment Information</p>
+                                <div class="inner-box-container">
+                                    <div class="inner-box">
+                                        <h3 class="inner-box-subtitle">File Id: <span
+                                                class="inner-box-color-span">5000</span>
+                                        </h3>
+                                        <h3 class="inner-box-subtitle">Payment type: <span
+                                                class='inner-box-span'>ACH</span>
+                                        </h3>
+                                        <h3 class="inner-box-subtitle">Payment refrence: <span
+                                                class='inner-box-span'>1001120</span>
+                                        </h3>
+                                    </div>
+                                    <div class="inner-box">
+                                        <h3 class="inner-box-subtitle">Vendor Id: <span
+                                                class='inner-box-span'>1001120</span>
+                                        </h3>
+                                        <h3 class="inner-box-subtitle">Currency: <span class='inner-box-span'>USD</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <button class="inner-box-button" mat-stroked-button>Cancel
+                                    Payment</button>
+                            </div>
+                            <div class="remittance-box ">
+                                <p class="iiner-box-title">Remittance</p>
+                                <div class="inner-box-container">
+                                    <div class="inner-box">
+                                        <h3 class="inner-box-subtitle">File: <span class='inner-box-span'>City
+                                                Bank</span>
+                                        </h3>
+                                        <h3 class="inner-box-subtitle">Exception: <span
+                                                class='inner-box-span'>None</span>
+                                        </h3>
+                                        <h3 class="inner-box-subtitle">Exception Description: <span
+                                                class='inner-box-span'>None</span>
+                                        </h3>
+                                    </div>
+                                    <div class="inner-box">
+                                        <h3 class="inner-box-subtitle">Invoice: <span
+                                                class='inner-box-span'>#272736</span>
+                                        </h3>
+                                        <h3 class="inner-box-subtitle">Status: <span class='inner-box-span'>Sent</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <button class="inner-box-button" mat-stroked-button>Download
+                                    Remittance</button>
                             </div>
                         </div>
                     </div>
-                </td>
-            </ng-container>
+                </div>
+            </td>
+        </ng-container>
 
-            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-            <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row"
-                [class.example-expanded-row]="expandedElement === element"
-                (click)="expandedElement = expandedElement === element ? null : element">
-            </tr>
-            <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
-        </table>
-    </mat-card>
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row"
+            [class.example-expanded-row]="expandedElement === element"
+            (click)="expandedElement = expandedElement === element ? null : element">
+        </tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+    </table>

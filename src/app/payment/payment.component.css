@@ -170,6 +170,22 @@
   width: calc((100% - 80px)/ 4);
   margin: 0 0 20px;
   min-width: 200px;
+  cursor: pointer;
+}
+
+
+.card:hover::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -21px;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-bottom: 18px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
 }
 
 .body-text {
@@ -186,6 +202,7 @@
 
 .arrow-icon {
   height: 15px;
+  margin-right: 5px;
 }
 
 .from-last-month {
@@ -194,12 +211,30 @@
   font-size: 11px;
 }
 
+
+.card:hover {
+  background-color: #4bb8b0;
+}
+
+.card:hover {
+  color: #fff;
+}
+
+.card:hover .body-text {
+  color: #fff;
+}
+
+.card:hover .from-last-month {
+  color: #fff;
+}
+
+
 table {
     width: 100%;
 }
 
 .table-style {
-    /* margin-top: 20px; */
+    padding: 30px;
 }
 
 table {
@@ -208,6 +243,7 @@ table {
   
   tr.example-detail-row {
     height: 0;
+
   }
   
   tr.example-element-row:not(.example-expanded-row):hover {
@@ -215,10 +251,11 @@ table {
   }
   
   tr.example-element-row:not(.example-expanded-row):active {
-    background: #efefef;
+    background: #f2f6fa;
   }
   
   .example-element-row td {
+    background: #f2f6fa;
     border-bottom-width: 0;
   }
   
@@ -243,7 +280,7 @@ table {
   }
   
   .example-element-description {
-    padding: 16px;
+    padding-left:16px;
   }
   
   .example-element-description-attribution {
@@ -257,13 +294,91 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px #ddd;
+    border: solid 1px #ddd;
+    border-bottom: none;
+    padding: 0 20px;
 }
 
 .example-element-description {
     width: 100%;
+
 }
 
 .padded-box {
-    padding: 40px 0 40px 0;
+    padding: 40px 20px;
+}
+
+
+.table-header-title {
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 20%;
+  text-align: center;
+}
+
+.table-row-title {
+  font-size: 14px;
+  text-align: center;
+}
+
+.mat-column-expandedDetail {
+  padding-right: 0 !important;
+}
+
+.remittance-box {
+  width: 50%;
+  padding: 30px;
+  border-left:solid 1px #ddd;
+}
+
+.payment-info-box {
+  width: 50%;
+  padding: 30px;
+}
+
+.inner-box-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iiner-box-title {
+  color: #999999;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px !important;
+}
+
+.inner-box {
+  width: 50%;
+}
+
+.inner-box-subtitle {
+  font-size: 12px;
+  color: #434343;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.inner-box-span {
+  font-size: 12px;
+  color: #434343;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.inner-box-color-span {
+  font-size: 12px;
+  color: #4bb8b0;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.inner-box-button {
+    display: block;
+    margin: 20px auto 0;
+    min-width: 200px;
+    color: #4bb8b0;
+    border: solid 1px #4bb8b0;
 }
