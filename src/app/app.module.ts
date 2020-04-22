@@ -19,6 +19,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { HttpClientModule } from "@angular/common/http";
 import { HomeModule } from './modules/home/home.module';
@@ -69,6 +70,7 @@ import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-a
     MatTableModule,
     MatTabsModule,
     MatStepperModule,
+    MatExpansionModule,
     HttpClientModule,
     HomeModule,
     MatProgressBarModule

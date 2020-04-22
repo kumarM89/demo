@@ -9,6 +9,7 @@
 
 .logo {
     display: block;
+    width: 150px;
 }
 
 .user-img {
@@ -36,7 +37,7 @@
     font-size: 13px;
 }
 .main-content {
-    margin-left: 200px !important;
+    margin-left: 150px !important;
     background-color: #f6f9fc !important;
 }
 
@@ -48,7 +49,7 @@
     background: #333C4B;
     font-size: 15px;
     color: #fff;
-    width: 200px;
+    width: 151px;
     padding:0px 10px;
 }
 .nav-icon {
@@ -71,24 +72,21 @@
     padding-left: 0px !important;
 }
 .side-nav-item {
-    height: 36px !important; 
-    width: 90% !important;
-    margin: 0px auto;   
+    height: 36px !important;
 }
-.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text {
-    border:2px solid red !important;
-}
+
 .side-nav-item:hover {
     color: #fff;
     text-decoration: none;
     background: #4bb8b0;
-    border-radius: 4px;
 }
 .side-nav-item a {
     text-decoration: none;
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
+    padding-left: 16px;
+    display: flex;
 }
 a.active {
     background: #4bb8b0;
@@ -118,14 +116,6 @@ a.active {
 
 .icon-margin {
     margin: 0px 20px;
-}
-
-.side-nav-item, .side-nav-item a {
-    width: 100%;
-}
-
-.side-nav-item a {
-    text-align: left;
 }
 
 .p-4 {
@@ -211,3 +201,9 @@ a.active {
 .ml-1 {margin-left: .25rem!important;} .ml-2 {margin-left: .5rem!important;}
 .ml-3 {margin-left: 1rem!important;} .ml-4 {margin-left: 1.5rem!important;}
 .ml-5 {margin-left: 3rem!important;}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

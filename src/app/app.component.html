@@ -1,44 +1,29 @@
-<mat-sidenav-container fullscreen>
+<mat-sidenav-container fullscreen autosize>
   <mat-sidenav mode="side" opened class="side-nav">
     <img src="assets/images/incedo-pay.svg" class="logo" />
     <div class="user-details">
-      <img src="assets/images/user.png" width="40" class="user-img" />
+      <img src="assets/images/User.png" width="30" class="user-img" />
       <div>
-        <div class="username">Username</div>
-        <div class="logout">Logout</div>
+        <div class="content-md">John Smith</div>
+        <a href="/logout" class="content-sm">Logout</a>
       </div>
     </div>
 
     <mat-list role="list">
-      <mat-list-item role="listitem" class="side-nav-item" *ngFor="let shoe of typesOfShoes">
-        <a matLine href="" class="nav-link">
-          <mat-icon matListIcon class="nav-icon">folder</mat-icon>
-          {{shoe}}
-        </a>
-      </mat-list-item>
+      <ng-container *ngFor="let listItem of navigationList">
+        <mat-list-item role="listitem" (click)="menuClicked(listItem)" class="side-nav-item"
+          *ngIf="!listItem.parent || listItem.isVisible">
+          <a matLine routerLink="/{{listItem.link}}" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+            <mat-icon matListIcon class="nav-icon center">{{listItem.icon}}</mat-icon>
+            <span class="content-sm">{{listItem.title}}</span>
+            <mat-icon *ngIf="listItem.isMulti" matListIcon class="nav-icon center">keyboard_arrow_down</mat-icon>
+          </a>
+        </mat-list-item>
+      </ng-container>
     </mat-list>
-
-    <!-- <mat-toolbar class="side-nav-links">
-      <mat-toolbar-row class="noPadding">
-        <div class="side-nav-item">
-          <a mat-button routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            title="Home">
-            <mat-icon svgIcon="navigation-placeholder"></mat-icon>
-            <span class="nav-text">Home</span>
-          </a>
-        </div>
-      </mat-toolbar-row>
-
-      <mat-toolbar-row class="noPadding">
-        <div class="side-nav-item">
-          <a mat-button routerLink="/payment" routerLinkActive="active" title="Payment Dashboard">
-            <mat-icon svgIcon="navigation-placeholder"></mat-icon>
-            <span class="nav-text">Payment Dashboard</span>
-          </a>
-        </div>
-      </mat-toolbar-row>
-    </mat-toolbar> -->
   </mat-sidenav>
+
   <mat-sidenav-content class="main-content">
     <mat-toolbar class="header shadow bg-white">
       <div class="page-title">

@@ -18,7 +18,39 @@ export class AppComponent {
     { value: 'Last 3 Years', viewValue: 'Last 3 Years' },
     { value: 'Last 5 Years', viewValue: 'Last 5 Years' }
   ];
-  typesOfShoes: string[] = ['Dashboard', 'Payment', 'Sunppliers', 'Charts', 'Graphs'];
+  navigationList = [
+    { title: 'Dashboard', link: 'home', icon: 'dashboard' },
+    { title: 'Payments', link: 'payments', icon: 'attach_money' },
+    { title: 'Files', link: 'files', icon: 'file_copy' },
+    { title: 'Suppliers', link: 'suppliers', icon: 'person_pin' },
+    { title: 'Reporting', link: 'reporting', icon: 'insert_chart', isMulti: true },
+    { title: 'Report Builder', link: 'reportBuilder', icon: 'insert_chart', parent: 'reporting', isVisible: false },
+    { title: 'Existing Report', link: 'existingReport', icon: 'insert_chart', parent: 'reporting', isVisible: false },
+    { title: 'Profile', link: 'profile', icon: 'person' },
+    { title: 'Configuration', link: 'configuration', icon: 'settings', isMulti: true },
+    { title: 'Payment', link: 'paymentConfig', icon: 'settings', parent: 'configuration', isVisible: false },
+    { title: 'Files', link: 'filesConfig', icon: 'settings', parent: 'configuration', isVisible: false }
+  ];
+  navList = [
+    {
+      heading: 'Dashboard',
+      icon: 'dashboard',
+      link: '/dashboard',
+      pages: []
+    },
+    {
+      heading: 'Main Heading',
+      icon: 'settings',
+      link: '/settings',
+      pages: [
+        {
+          title: 'Subpage',
+          link: '/settings/advanced',
+          icon: ''
+        }
+      ]
+    }
+  ]
 
   constructor(
     private titleService: TitleService,
@@ -41,5 +73,11 @@ export class AppComponent {
       this.title = value;
       this.cdRef.detectChanges();
     });
+  }
+
+  menuClicked(listItem) {
+    this.navigationList
+      .filter((item) => item.parent === listItem.link)
+      .forEach((item) => item.isVisible = !item.isVisible)
   }
 }
