@@ -345,7 +345,7 @@ table {
 }
 
 .stepper-container {
-  height: 102px;
+  height: 90px;
 }
 
 .mat-label {
@@ -385,4 +385,19 @@ table {
     min-width: 200px;
     color: #4bb8b0;
     border: solid 1px #4bb8b0;
+}
+
+.inner-box-button-small {
+  display: block;
+  width: 120px;
+  color: #4bb8b0;
+  border: solid 1px #4bb8b0;
+}
+
+
+.inner-box-button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
 }

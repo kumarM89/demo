@@ -13,23 +13,23 @@ export interface PeriodicElement {
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    name: "Vendor A",
+    name: "1_123_PYMY201811211",
     date: '04/05/20',
-    amount: '$110',
+    amount: '$50,000',
     fileid: 15053332,
     status: "File Initiated"
   }, {
-    name: "Vendor B",
+    name: "PMTX__002",
     date: '04/06/20',
-    amount: '$120',
+    amount: '$150,000',
     fileid: 12053302,
-    status: "File Initiated",
+    status: "Processed",
   }, {
-    name: "Vendor C",
+    name: "PMTX__003",
     date: '04/04/20',
-    amount: '$130',
+    amount: '$50,000',
     fileid: 11053130,
-    status: "File Initiated",
+    status: "Exception",
   }
 ];
 
