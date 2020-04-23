@@ -8,28 +8,28 @@ export interface PeriodicElement {
   date: string;
   amount: string;
   paymentid: number;
-  status: string;
+  pyment_Type: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     name: "Vendor A",
     date: '04/05/20',
-    amount: '$110',
+    amount: '$10,000',
     paymentid: 15053332,
-    status: "Payment Initiated"
+    pyment_Type: "ACH"
   }, {
     name: "Vendor B",
     date: '04/06/20',
-    amount: '$120',
+    amount: '$10,000',
     paymentid: 12053302,
-    status: "Payment Initiated",
+    pyment_Type: "ACH",
   }, {
     name: "Vendor C",
     date: '04/04/20',
-    amount: '$130',
+    amount: '$10,000',
     paymentid: 11053130,
-    status: "Payment Initiated",
+    pyment_Type: "ACH",
   }
 ];
 
@@ -69,7 +69,7 @@ export class PaymentComponent implements OnInit {
   }
 
   dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name', 'date', 'amount', 'paymentid', 'status'];
+  columnsToDisplay = ['name', 'date', 'amount', 'paymentid', 'pyment_Type'];
   expandedElement: PeriodicElement | null;
 
   initializeData() {

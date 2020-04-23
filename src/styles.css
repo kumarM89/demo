@@ -19,6 +19,7 @@ div.mat-list-item-content, .mat-list-text {
     font-size: 16px;
 }
 
+
 .content-md {
     font-size: 14px;
 }
@@ -29,4 +30,29 @@ div.mat-list-item-content, .mat-list-text {
 
 .content-xs {
     font-size: 10px;
+}
+
+
+.status-container .mat-step-icon-content .ng-star-inserted {
+    display: none !important;
+}
+
+.status-container .mat-step-icon {
+    width: 11px !important;
+    height: 11px !important;
+
+}
+
+.status-container .mat-horizontal-stepper-header:not(:first-child)::after, 
+.status-container .mat-horizontal-stepper-header:not(:first-child)::before, 
+.status-container .mat-horizontal-stepper-header:first-child::after {
+    top: 29px !important;
+    width: calc(50% - 5px) !important;
+}
+
+.status-container .mat-step-label {
+    padding: 10px 0 0 0 !important;
+    font-size: 11px !important;
+    color: #999999 !important;
+    font-weight: 500 !important;
 }
