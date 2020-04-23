@@ -10,7 +10,7 @@ import {ThemePalette} from '@angular/material/core';
 export class HomeComponent implements OnInit {
   title = "Home";
   color: ThemePalette = 'primary';
-  cardHeader = 'Amount Per Payment Type';
+  cardHeader = 'Payments by Type';
   
   constructor(private titleService: TitleService) { }
 
@@ -20,9 +20,9 @@ export class HomeComponent implements OnInit {
 
   handleChange(event){
     if(event.value == 'amount')
-      this.cardHeader = 'Amount Per Payment Type';
+      this.cardHeader = 'Payments by Type';
     else
-      this.cardHeader = 'Volume Of Payment Types';
+      this.cardHeader = 'Payments by Type';
   }
 
 }

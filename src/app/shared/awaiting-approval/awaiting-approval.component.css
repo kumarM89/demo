@@ -28,7 +28,11 @@
 .mat-button.mat-seagreen {
     color: #4BB8B0;
  }
- 
+ .cardHeader{
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 1.5em;
+}
  .mat-raised-button.mat-seagreen, .mat-flat-button.mat-seagreen{
     background-color: #4BB8B0;
     color: white;
