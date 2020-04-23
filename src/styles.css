@@ -40,7 +40,10 @@ div.mat-list-item-content, .mat-list-text {
 .status-container .mat-step-icon {
     width: 11px !important;
     height: 11px !important;
+}
 
+.status-container .mat-step-icon-selected {
+    background: #009ddc !important;
 }
 
 .status-container .mat-horizontal-stepper-header:not(:first-child)::after, 
