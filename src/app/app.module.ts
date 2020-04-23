@@ -19,6 +19,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { HttpClientModule } from "@angular/common/http";
@@ -36,6 +37,7 @@ import { PaymentVolComponent } from './shared/payment-vol/payment-vol.component'
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { CampaignProgressComponent } from './shared/campaign-progress/campaign-progress.component';
 import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-approval.component';
+import { FileComponent } from './file/file.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-a
     PaymentVolComponent,
     SuppliersComponent,
     CampaignProgressComponent,
-    AwaitingApprovalComponent
+    AwaitingApprovalComponent,
+    FileComponent
     ],
   imports: [
     BrowserModule,
@@ -70,6 +73,7 @@ import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-a
     MatTableModule,
     MatTabsModule,
     MatStepperModule,
+    MatButtonToggleModule,
     MatExpansionModule,
     HttpClientModule,
     HomeModule,

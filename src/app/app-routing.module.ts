@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HomeComponent } from './home/home.component';
 import { SuppliersComponent } from './suppliers/suppliers.component';
+import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-approval.component';
+import { FileComponent } from './file/file.component';
 
 
 const routes: Routes = [
@@ -11,7 +13,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'payments', component: PaymentComponent },
   { path: 'suppliers', component: SuppliersComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'files', component: FileComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'approval', component: AwaitingApprovalComponent }
 ];
 
 @NgModule({

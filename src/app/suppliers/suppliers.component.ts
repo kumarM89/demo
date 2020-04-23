@@ -17,7 +17,7 @@ export class SuppliersComponent implements OnInit {
   ]
 
   gridViewData = [
-    {name: 'Walmart', email: 'walmart@comapp.com', contact: '18156850566', logo: 'walmart', location: '1919 Davis St, San Leandro, CA 94577', isSelected: true },
+    {name: 'Walmart', email: 'walmart@comapp.com', contact: '18156850566', logo: 'walmart-t', location: '1919 Davis St, San Leandro, CA 94577', isSelected: true },
     {name: 'Target', email: 'sherry@socialheit.com', contact: '4567898765', logo: 'target', location: '', isSelected: false },
     {name: 'Amazon', email: 'jk@amazon.com', contact: '185-656-5656', logo: 'amazon', location: 'New York, NY, USA', isSelected: false },
     {name: 'Costco', email: 'custservice@costco.com', contact: '5313337559', logo: 'costco', location: 'Wyvern Way, Derby DE21, UK', isSelected: false },

@@ -9,7 +9,7 @@ import {ThemePalette} from '@angular/material/core';
 })
 export class CampaignProgressComponent implements OnInit {
   color: ThemePalette = 'primary';
-  mode: ProgressBarMode = 'determinate';
+  mode: ProgressBarMode = 'buffer';
   value = 50;
   bufferValue = 75;
 

@@ -36,17 +36,17 @@
       margin-top:35px;
   }
 
-.payment-container {
+.file-container {
     margin: 20px;
 }
 
-.payment-overview {
+.file-overview {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.payment-tile-title {
+.file-tile-title {
   font-weight: 600;
   text-align: center;
 }
@@ -251,6 +251,7 @@ table {
     background: #f2f6fa;
     border-bottom-width: 0;
   }
+
   
   .example-element-detail {
     overflow: hidden;
@@ -325,7 +326,7 @@ table {
   border-left:solid 1px #ddd;
 }
 
-.payment-info-box {
+.file-info-box {
   width: 50%;
   padding: 15px;
 }

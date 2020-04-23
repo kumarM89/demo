@@ -10,7 +10,6 @@ import {ThemePalette} from '@angular/material/core';
 export class HomeComponent implements OnInit {
   title = "Home";
   color: ThemePalette = 'primary';
-  checked = false;
   cardHeader = 'Amount Per Payment Type';
   
   constructor(private titleService: TitleService) { }
@@ -19,12 +18,11 @@ export class HomeComponent implements OnInit {
     this.titleService.setTitle(this.title);
   }
 
-  testChange(event){
-    this.checked = event.checked;
-    if(this.checked)
-      this.cardHeader = 'Volume Of Payment Types';
-    else
+  handleChange(event){
+    if(event.value == 'amount')
       this.cardHeader = 'Amount Per Payment Type';
+    else
+      this.cardHeader = 'Volume Of Payment Types';
   }
 
 }

@@ -39,9 +39,8 @@ export class AmountPerPayTypeComponent implements OnInit {
   buildGraph(){
     this.amountCharts = Highcharts;
     this.amountCharts.theme ={ 
-      colors: ['#009DDC', '#7B64C0', '#FED766','#E273A2'],
-     
-    };
+      colors: ['#009DDC', '#7B64C0', '#FED766','#E273A2']
+         };
 
     this.amountChartOptions = {   
       chart: {
@@ -64,7 +63,7 @@ export class AmountPerPayTypeComponent implements OnInit {
     yAxis: {
       min:0,
       max:9,
-      tickInterval: 1,
+      tickInterval: 2.5,
       title: {
           text: null
       },
@@ -80,7 +79,7 @@ export class AmountPerPayTypeComponent implements OnInit {
                 enabled: false
             },
             marker:{
-              enabled: false
+              enabled: true
             },
 
             enableMouseTracking: true

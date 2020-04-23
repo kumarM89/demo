@@ -6,7 +6,13 @@
 .container-2-box{
     flex-basis: 30%;
 }
-
+.mat-button-toggle{
+  color: #4BB8B0;
+}
+.mat-button-toggle-checked{
+  background-color: #4BB8B0;
+  color: white;
+}
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +24,6 @@
     margin: 10px;
     text-align: center;
     font-size: 30px;
-    padding-bottom:30px
   }
   .flex-chart {
     display: flex;

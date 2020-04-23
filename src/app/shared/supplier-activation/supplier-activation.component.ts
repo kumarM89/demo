@@ -20,18 +20,20 @@ export class SupplierActivationComponent implements OnInit {
     this.supplyData = [{
         name: 'Enrolled',
         data: [4500,4800,4900,5100,5500,5900,6100,6400,6800,7100,7400,8300]
-      }, {
-        name: 'Pending',
-        data: [5500,3200,3800,4200,4400,4300,3200,2100,2800,4100,3200,5200]
-      }, {
-        name: 'Rejected',
-        data: [500,900,1200,1800,2100,2000,1100,1500,1900,2200,1100,2200]
-      }];
+       }
+       //, {
+      //   name: 'Pending',
+      //   data: [5500,3200,3800,4200,4400,4300,3200,2100,2800,4100,3200,5200]
+      // }, {
+      //   name: 'Rejected',
+      //   data: [500,900,1200,1800,2100,2000,1100,1500,1900,2200,1100,2200]
+      // }
+    ];
   }
   buildGraph(){
     this.supplyCharts = Highcharts;
     this.supplyCharts.theme ={ 
-      colors: ['#009DDC', '#7B64C0', '#FED766'],
+      colors: ['#009DDC']
   
     };
 
@@ -48,7 +50,7 @@ export class SupplierActivationComponent implements OnInit {
     yAxis: {
       min:0,
       max:10000,
-      tickInterval: 1000,
+      tickInterval: 2500,
       title: {
           text: null
       }
