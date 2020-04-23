@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-approval.component';
 import { FileComponent } from './file/file.component';
-
+import { ReportComponent } from './report/report.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'suppliers', component: SuppliersComponent },
   { path: 'files', component: FileComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'approval', component: AwaitingApprovalComponent }
+  { path: 'approval', component: AwaitingApprovalComponent },
+  { path: 'report', component:ReportComponent}
 ];
 
 @NgModule({

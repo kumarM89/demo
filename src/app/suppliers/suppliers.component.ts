@@ -10,7 +10,7 @@ export class SuppliersComponent implements OnInit {
   view = "grid";
   displayedColumns: string[] = ['name', 'email', 'contact', 'location'];
   overviewTiles = [
-    { title: 'Enrollment Initiated', value: '25000', percent: '48', icon: 'arrow_downward', color: 'yellow' },
+    { title: 'Enrollment Initiated', value: '25000', percent: '48', icon: 'arrow_downward', color: 'yellow', isSelected: true },
     { title: 'Active', value: '22000', percent: '42', icon: 'arrow_upward', color: 'green' },
     { title: 'Enrollment Pending', value: '4800', percent: '42', icon: 'arrow_upward', color: 'blue' },
     { title: 'Activation Pending', value: '25000', percent: '35', icon: 'arrow_downward', color: 'red' }

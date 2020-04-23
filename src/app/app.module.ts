@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,11 +17,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from "@angular/common/http";
 import { HomeModule } from './modules/home/home.module';
 import { LoginComponent } from './login/login.component';
@@ -38,6 +41,7 @@ import { SuppliersComponent } from './suppliers/suppliers.component';
 import { CampaignProgressComponent } from './shared/campaign-progress/campaign-progress.component';
 import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-approval.component';
 import { FileComponent } from './file/file.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +56,8 @@ import { FileComponent } from './file/file.component';
     SuppliersComponent,
     CampaignProgressComponent,
     AwaitingApprovalComponent,
-    FileComponent
+    FileComponent,
+    ReportComponent
     ],
   imports: [
     BrowserModule,
@@ -64,6 +69,7 @@ import { FileComponent } from './file/file.component';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     MatButtonModule,
     MatCardModule,
     MatSlideToggleModule,
@@ -72,12 +78,15 @@ import { FileComponent } from './file/file.component';
     MatGridListModule,
     MatTableModule,
     MatTabsModule,
+    MatFormFieldModule,
     MatStepperModule,
     MatButtonToggleModule,
     MatExpansionModule,
     HttpClientModule,
     HomeModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]

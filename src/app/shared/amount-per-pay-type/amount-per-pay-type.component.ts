@@ -44,7 +44,7 @@ export class AmountPerPayTypeComponent implements OnInit {
 
     this.amountChartOptions = {   
       chart: {
-        type: 'line'
+        type: 'spline'
     },
     title: {
         text: null
@@ -74,7 +74,7 @@ export class AmountPerPayTypeComponent implements OnInit {
             }
     },
     plotOptions: {
-        line: {
+        spline: {
             dataLabels: {
                 enabled: false
             },

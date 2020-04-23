@@ -1,14 +1,15 @@
-
 <mat-card>
-  <mat-card-header>
-      <mat-card-title class="cardHeader">Supplier Activation</mat-card-title>
-  </mat-card-header>
+    <mat-card-title class="chart-title">
+      <div class="cardHeader">Supplier Activation</div>
+      <div>
+        <button mat-button (click)="router.navigate(['/suppliers']);">
+          <mat-icon class="content-md icon-view-all">remove_red_eye</mat-icon>
+          <span class="content-sm" style="color: #4BB8B0;">View All</span>
+        </button>
+      </div>
+    </mat-card-title>
   <mat-card-content class="m10">
-    <highcharts-chart
-    [Highcharts] = "supplyCharts" 
-    [options] = "supplyChartOptions" 
-    class="chartDiv">
- </highcharts-chart>  
+    <highcharts-chart [Highcharts]="supplyCharts" [options]="supplyChartOptions" class="chartDiv">
+    </highcharts-chart>
   </mat-card-content>
 </mat-card>
-

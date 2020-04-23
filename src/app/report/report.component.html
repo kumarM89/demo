@@ -1,0 +1,213 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title class="cardHeader">Define Report Parameters</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="m10">
+            <div class="flex-container">
+                <div style="flex-grow: 3" class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Insert name of report</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div style="flex-grow: 3;" class="flex-item">
+                    <mat-form-field style="width: 90%;line-height:2">
+                        <mat-label>Select Data Type</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let data of dataType" [value]="data.value">
+                            {{data.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div style="flex-grow: 1" class="flex-item">
+                    <mat-form-field style="width: 90%;line-height:2;">
+                        <mat-label>Start Date</mat-label>
+                        <input matInput [matDatepicker]="startDatePicker">
+                        <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #startDatePicker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                <div style="flex-grow: 1" class="flex-item">
+                    <mat-form-field style="width: 90%;line-height:2;">
+                        <mat-label>End Date</mat-label>
+                        <input matInput [matDatepicker]="endDatePicker">
+                        <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #endDatePicker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+            </div>
+
+              <h2 class="cardHeader">Column</h2>
+              <div class="flex-container2">
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Payment Id</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                       
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Amount</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Value Date</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Status</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Remit to id</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Account Type</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Currency</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Supplier Id</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;">
+                        <mat-label>Supplier Name</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex-item">
+                    <button 
+                        mat-stroked-button 
+                        style="height: 34px;"
+                        class="mat-button-toggle"
+                        >
+                        Add More
+                    </button>
+                </div>
+                <div class="flex-item" style="text-align: center;margin-left:30px">
+                    <mat-icon 
+                        (click)="handleClick()"
+                        style="cursor: pointer;">filter_list</mat-icon>
+                </div>
+              </div>
+
+              <div class="flex-container" *ngIf="showFilter">
+                <div style="flex-grow: 3" class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;text-align:center">
+                        <mat-label>----------------------Payment Id-------------------</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon>
+                       
+                    </mat-form-field>
+                </div>
+                <div style="flex-grow: 3;" class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;text-align:center">
+                        <mat-label>----------------------Supplier Id-------------------</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon> 
+                    </mat-form-field>
+                </div>
+                <div style="flex-grow: 3;" class="flex-item">
+                    <mat-form-field appearance="outline" style="width: 90%;text-align:center">
+                        <mat-label>----------------------Supplier Name-------------------</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>close</mat-icon> 
+                    </mat-form-field>
+                </div>
+              </div>
+
+              <div>
+                <button 
+                    mat-stroked-button 
+                    style="height: 34px;"
+                    class="mat-button-toggle">Preview</button>
+              </div>
+
+              <div style="padding-top: 2em;display:flex">
+                <h2 class="cardHeader">Report Preview</h2>
+                <mat-card-title style="margin-left: 70px;">
+                    <mat-button-toggle-group 
+                        appearance="legacy" 
+                        name="fontStyle" 
+                        aria-label="Font Style"
+                        value="chart"
+                        #group="matButtonToggleGroup"
+                        style="margin-top: 5px;"
+                        >
+                        <mat-button-toggle value="chart">Chart</mat-button-toggle>
+                        <mat-button-toggle value="table">Table</mat-button-toggle>
+                      </mat-button-toggle-group>
+                 </mat-card-title>
+              </div>
+                    
+
+              <div class="flex-container">
+                <div style="flex: 1;" class="flex-item">
+                    <mat-form-field style="width: 90%;" appearance="outline">
+                        <mat-label>Edit x-axis</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let x of xAxis" [value]="x.value">
+                            {{x.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field style="width: 90%;" appearance="outline">
+                        <mat-label>Edit y-axis</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let y of yAxis" [value]="y.value">
+                            {{y.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field style="width: 90%;" appearance="outline">
+                        <mat-label>Select Cumulative Function</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let func of cumulativeFunc" [value]="func.value">
+                            {{func.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div style="flex: 1" class="flex-item">
+                    <highcharts-chart
+                        [Highcharts] = "reportCharts" 
+                        [options] = "reportChartOptions" 
+                        class="chartDiv">
+                    </highcharts-chart>  
+                </div>
+                
+               
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

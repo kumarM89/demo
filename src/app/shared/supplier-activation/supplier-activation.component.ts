@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-supplier-activation',
@@ -10,6 +11,8 @@ export class SupplierActivationComponent implements OnInit {
   supplyCharts;
   supplyChartOptions ={};   
   supplyData = [];
+
+  constructor(public router: Router) {}
  
   ngOnInit(): void{
     this.initializeData();

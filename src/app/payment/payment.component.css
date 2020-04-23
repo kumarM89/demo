@@ -217,7 +217,11 @@
   color: #fff
 }
 
-.selected .body-text, .selected .from-last-month, .card:hover .body-text, .card:hover .from-last-month {
+.selected .body-text,
+.selected .from-last-month,
+.card:hover .body-text,
+.card:hover .from-last-month,
+.card:hover .arrow {
   color: #fff;
 }
 

@@ -25,7 +25,7 @@ export class AppComponent {
     { title: 'Files', link: 'files', icon: 'file_copy' },
     { title: 'Suppliers', link: 'suppliers', icon: 'person_pin' },
     { title: 'Reporting', link: 'reporting', icon: 'insert_chart', isMulti: true },
-    { title: 'Report Builder', link: 'reportBuilder', icon: 'insert_chart', parent: 'reporting', isVisible: false },
+    { title: 'Report Builder', link: 'report', icon: 'insert_chart', parent: 'reporting', isVisible: false },
     { title: 'Existing Report', link: 'existingReport', icon: 'insert_chart', parent: 'reporting', isVisible: false },
     { title: 'Profile', link: 'profile', icon: 'person' },
     { title: 'Configuration', link: 'configuration', icon: 'settings', isMulti: true },

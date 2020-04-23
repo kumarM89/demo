@@ -1,0 +1,44 @@
+.container{
+    margin: 1.5vw;
+}
+.cardHeader{
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 1.5em;
+  }
+  .m10{
+    margin-top: 10px;
+}
+.flex-container {
+    display: flex;
+    align-items: stretch;
+  }
+  .mat-button-toggle {
+    color: #4BB8B0;
+    height: 30px;
+    font-family: 'Nunito Semibold', sans-serif;
+    font-size: 10px;
+    font-style: bold;
+  }
+  ::ng-deep .mat-button-toggle-label-content {
+    margin-top: -3px ;
+  }
+  .mat-button-toggle-checked{
+    background-color: #4BB8B0;
+    color: white;
+  }
+  .flex-item {
+    text-align: left;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  .flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .chartDiv{
+    width: 90%; 
+    height: 250px; 
+    display: block;
+}

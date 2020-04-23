@@ -1,16 +1,18 @@
 <main>
     <div class="card-container">
-        <mat-card class="card"  *ngFor="let tile of overviewTiles">
+        <mat-card class="card"  *ngFor="let tile of overviewTiles"
+        [ngClass]="{'selected': tile.isSelected}"
+        >
             <mat-card-title>
                 <h3 class="mat-h3 tile-title">{{tile.title}}</h3>
             </mat-card-title>
             <mat-card-content>
                 <div class="tile-card-body">
                     <!-- <img class='arrow-icon' src="assets/images/arrow-up-green.svg"> -->
-                    <mat-icon aria-hidden="false" class="{{tile.color}}">{{tile.icon}}</mat-icon>
-                    <p class="{{tile.color}} body-text">{{tile.value}}</p>
+                    <mat-icon aria-hidden="false" class="{{tile.color}} arrow" [ngClass]="{'selected': tile.isSelected}">{{tile.icon}}</mat-icon>
+                    <p class="{{tile.color}} body-text" [ngClass]="{'selected': tile.isSelected}">{{tile.value}}</p>
                 </div>
-                <p class="from-last-month">{{tile.percent}}% From Last Month</p>
+                <p class="from-last-month" [ngClass]="{'selected': tile.isSelected}">{{tile.percent}}% From Last Month</p>
             </mat-card-content>
         </mat-card>
     </div>
@@ -118,6 +120,20 @@
                                     <div class="info-header">
                                         <div class="content-sm">Email Address:</div>
                                         <div class="content-sm">kantihadiyal@gmail.com</div>
+                                    </div>
+                                    <div class="">
+                                        <button mat-raised-button color="primary">
+                                            <mat-icon>lock</mat-icon>
+                                        </button>
+                                        <button mat-raised-button color="primary">
+                                            <mat-icon>lock_open</mat-icon>
+                                        </button>
+                                        <button mat-raised-button color="primary">
+                                            <mat-icon>home</mat-icon>
+                                        </button>
+                                        <button mat-raised-button color="primary">
+                                            <mat-icon>home</mat-icon>
+                                        </button>
                                     </div>
                                 </div>
                             </mat-tab>

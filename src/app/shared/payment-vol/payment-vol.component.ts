@@ -21,12 +21,12 @@ export class PaymentVolComponent implements OnInit {
   initializeData(){
     this.pieData = [{
       type: 'pie',
-      
-      innerSize: '70%',
+      innerSize: '65%',
+      showInLegend: true,
       data: [
-          ['ACH', 61],
-          ['Check', 12],
-          ['Virtual Card',27]
+          ['ACH', 15000],
+          ['Check', 3000],
+          ['Virtual Card', 6500]
       ]
     }];
   }
@@ -38,11 +38,6 @@ export class PaymentVolComponent implements OnInit {
         plotBackgroundColor: null,
         plotBorderWidth: 0,
         plotShadow: false,
-        margin: [0, 300, 0, 0],
-        spacingTop: 0,
-        spacingBottom: 0,
-        spacingLeft: 0,
-        spacingRight: 0
         
     },
     credits: {
@@ -52,28 +47,37 @@ export class PaymentVolComponent implements OnInit {
       enabled: true
     },
     title: {
-        text: '24,500<br>Total Payments',
-        align: 'left',
-        verticalAlign: 'bottom',
+        text: '<span style="font-size: 24px;">24,500</span>',
+        align: 'center',
+        verticalAlign: 'middle',
+        x: -80,
         style: {
-          // margin: '50px', // does not work for some reasons, see workaround below
-          color: '#707070',
-          fontSize: '12px',
-          fontWeight: 'normal',
-          margin:'10px'
+          color: '#4bb8b0',
         }
-       
+    },
+    subtitle: {
+      text: '<span class="content-sm">Total Payments</span>',
+      align: 'center',
+      verticalAlign: 'middle',
+      x: -80,
+      y: 30,
     },
     tooltip: {
         pointFormat: '<b>{point.percentage:.1f}%</b>'
     },
     legend: {
       enabled: true,
-      floating: true,
-      verticalAlign: 'xbottom',
+      itemMarginBottom: 20,
+      verticalAlign: 'top',
       align: 'right',
       layout: 'vertical',
-      
+      x: -50,
+      labelFormatter: function() {
+        return '<span><span class="content-lg">' + this.name + '</span><br>'
+                + '<span class="content-sm" style="color: #4bb8b0;">' + this.percentage.toFixed(0) + '%</span>'
+                + '<span class="content-xs" style="color: #666666;"> (' + this.y + ')</span>'
+                + '</span>';
+      }
     },
     accessibility: {
         point: {
@@ -85,6 +89,8 @@ export class PaymentVolComponent implements OnInit {
             dataLabels: {
                 enabled: false
             },
+            center: ['55%', '50%'],
+            size: '110%',
             showInLegend: true,
             startAngle: 360,
             endAngle: -360,

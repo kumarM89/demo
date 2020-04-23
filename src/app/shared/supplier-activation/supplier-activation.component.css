@@ -20,6 +20,17 @@
 }
 .cardHeader{
     font-family: Lato;
-    font-weight: 900;
-    font-size: 1.5em;
-  }
+    font-weight: bold;
+    font-size: 16px;
+}
+.icon-view-all {
+    padding: 0;
+    margin-top: 10px;
+    color: #4BB8B0;
+}
+
+.chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

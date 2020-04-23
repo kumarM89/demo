@@ -153,17 +153,33 @@ main {
     cursor: pointer;
 }
 
-.card-details:hover, .selected {
+.card-details:hover, .selected, .card:hover {
     border: 1px solid #4bb8b0;
-    color: #fff;
+    color: #fff !important;
 }
 
-.card-details:hover, .data-row:hover, .selected {
+.card-details:hover, .data-row:hover, .selected, .card:hover {
     background: #4bb8b0;
 }
 
-.data-row:hover td, .selected td {
-    color: #fff;
+.data-row:hover td, .selected td,
+.card:hover .body-text, .card:hover .arrow,
+.card:hover .from-last-month {
+    color: #fff !important;
+}
+
+.selected::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -21px;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-bottom: 18px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
 }
 
 .center {

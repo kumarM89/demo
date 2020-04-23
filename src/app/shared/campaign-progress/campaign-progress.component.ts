@@ -20,7 +20,7 @@ export class CampaignProgressComponent implements OnInit {
         bufferValue : 17
     },
     {
-      name: 'Campaign 2',
+      name: 'Campaign 2<br>Example with long name',
       value: 82,
       bufferValue : 18
     },

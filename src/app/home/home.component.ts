@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TitleService } from '../title.service';
 import {ThemePalette} from '@angular/material/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   color: ThemePalette = 'primary';
   cardHeader = 'Payments by Type';
   
-  constructor(private titleService: TitleService) { }
+  constructor(private titleService: TitleService, public router: Router) { }
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
@@ -24,5 +25,4 @@ export class HomeComponent implements OnInit {
     else
       this.cardHeader = 'Payments by Type';
   }
-
 }
