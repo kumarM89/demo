@@ -6,7 +6,11 @@
         <mat-card>
             <mat-card-header style="display: flex;">
                 <div style="flex:1;text-align:left;padding-top:10px;">
-                    <mat-card-title style="font-size: 19px;font-weight: 900;margin-left:-25px">{{cardHeader}}</mat-card-title>    
+                    <mat-card-title 
+                        class="cardHeader" 
+                        style="margin-left:-25px">
+                        {{cardHeader}}
+                    </mat-card-title>    
                 </div>
                 <div style="flex: 1;">
                     <mat-card-title>
@@ -17,11 +21,18 @@
                             value="amount"
                             #group="matButtonToggleGroup"
                             (change)="handleChange($event)"
-                            style="font-size: 14px;">
+                            >
                             <mat-button-toggle value="amount">Amount</mat-button-toggle>
                             <mat-button-toggle value="volume">Volume</mat-button-toggle>
                           </mat-button-toggle-group>
                      </mat-card-title>
+                </div>
+                <div style="flex: 1;">
+                    <button 
+                        mat-stroked-button 
+                        color="primary"
+                        style="height: 34px;"
+                        class="mat-button-toggle">View All</button>
                 </div>
                 
              

@@ -19,7 +19,7 @@ export class SupplierActivationComponent implements OnInit {
   initializeData(){
     this.supplyData = [{
         name: 'Enrolled',
-        data: [4500,4800,4900,5100,5500,5900,6100,6400,6800,7100,7400,8300]
+        data: [4000,5000,6500,8000]
        }
        //, {
       //   name: 'Pending',
@@ -45,7 +45,7 @@ export class SupplierActivationComponent implements OnInit {
         text: null
     },
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May','June','July','Aug','Sept','Oct','Nov','Dec']
+        categories: ['Q1', 'Q2', 'Q3', 'Q4']
     },
     yAxis: {
       min:0,

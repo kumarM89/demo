@@ -16,10 +16,6 @@
     font-weight: 600;
 }
 
-.mat-option-text, .mat-select-value-text span {
-    font-size: 12px;
-}
-
 .user-details {
     background-color: #666c78;
     display: flex;

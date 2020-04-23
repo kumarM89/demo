@@ -1,15 +1,12 @@
 
 <mat-card>
   <mat-card-header>
-      <mat-card-title class="box-title">Campaign</mat-card-title>
+      <mat-card-title class="box-title cardHeader" style="margin-left: -20px;">Campaign Completion</mat-card-title>
   </mat-card-header>
-  <mat-card-content *ngFor="let progress of progressList">
+  <mat-card-content *ngFor="let progress of progressList" style="padding-top: 1em;">
     
         <div class="progress-title">{{progress.name}}</div>
-    
-    
         <div class="progress-green-text">{{progress.value}}%</div>
-   
     <mat-progress-bar
                         [color]="color"
                         [mode]="mode"
@@ -18,34 +15,3 @@
                     </mat-progress-bar>
   </mat-card-content>
 </mat-card>
-<!-- <div>
-    <div>
-        <mat-card >
-            <mat-card-header>
-              <mat-card-title><b>Campaign Completion</b></mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <div *ngFor="let progress of progressList"
-                >
-                <div class="container" >
-                    <div>
-                        <b><h3 style="margin:0px"><strong>{{progress.name}}</strong></h3></b>
-                    </div>
-                    <div >
-                        <b style="margin:0px" class="txtColor">{{progress.value}}%</b>
-                    </div>
-                </div>
-                <div  >
-                    <mat-progress-bar
-                        [color]="color"
-                        [mode]="mode"
-                        [value]="progress.value"
-                        [bufferValue]="progress.bufferValue">
-                    </mat-progress-bar>
-                </div>
-            </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-</div> -->
-

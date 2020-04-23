@@ -21,7 +21,8 @@ export class PaymentVolComponent implements OnInit {
   initializeData(){
     this.pieData = [{
       type: 'pie',
-      innerSize: '75%',
+      
+      innerSize: '70%',
       data: [
           ['ACH', 61],
           ['Check', 12],
@@ -36,7 +37,13 @@ export class PaymentVolComponent implements OnInit {
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: 0,
-        plotShadow: false
+        plotShadow: false,
+        margin: [0, 300, 0, 0],
+        spacingTop: 0,
+        spacingBottom: 0,
+        spacingLeft: 0,
+        spacingRight: 0
+        
     },
     credits: {
         enabled: false
@@ -46,11 +53,27 @@ export class PaymentVolComponent implements OnInit {
     },
     title: {
         text: '24,500<br>Total Payments',
-        align: 'center',
-        verticalAlign: 'middle'
+        align: 'left',
+        verticalAlign: 'bottom',
+        style: {
+          // margin: '50px', // does not work for some reasons, see workaround below
+          color: '#707070',
+          fontSize: '12px',
+          fontWeight: 'normal',
+          margin:'10px'
+        }
+       
     },
     tooltip: {
         pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    legend: {
+      enabled: true,
+      floating: true,
+      verticalAlign: 'xbottom',
+      align: 'right',
+      layout: 'vertical',
+      
     },
     accessibility: {
         point: {

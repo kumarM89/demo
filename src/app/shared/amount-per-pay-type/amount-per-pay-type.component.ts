@@ -21,18 +21,18 @@ export class AmountPerPayTypeComponent implements OnInit {
   initializeData(){
     this.volData = [{
         name: 'ACH',
-        data: [1.2,1.35,1.5,1.4,1.3,1.3,1.2,1.2,1.1,1.1,1.1,1.1]
+        data: [1.8,0.3,2.0,0.2]
       }, {
         name: 'Check',
-        data: [5.2,5.4,5.6,6.0,5.7,5.2,6.0,6.3,6.8,6.7,6.6,6.5]
+        data: [5.2,7.5,8.1,5.0]
       },
       {
         name: 'Virtual Card',
-        data: [1.0,1.1,1.2,1.3,1.3,1.2,1.1,1.0,1.0,1.0,1.2,1.3]
+        data: [0.2,2.6,1.5,2.3]
       },
       {
         name: 'Total',
-        data: [7.2,7.4,7.6,8.0,7.7,7.2,8.0,8.3,8.8,8.7,8.6,8.5]
+        data: [9.5,5.5,8.3,8.4]
       }
     ];
   }
@@ -58,7 +58,7 @@ export class AmountPerPayTypeComponent implements OnInit {
       enabled: false
   },
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['Q1', 'Q2', 'Q3', 'Q4']
     },
     yAxis: {
       min:0,
