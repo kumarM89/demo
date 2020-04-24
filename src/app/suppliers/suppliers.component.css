@@ -199,6 +199,25 @@ main {
     color: #fff !important;
 }
 
+.info-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.mat-tab-body-content {
+    overflow: hidden !important;
+}
+
+.info-button{
+    font-size: 9px;
+    padding: 5px 0px 0px 5px;
+    line-height: 1px;
+    min-width: 15px;
+    height: 23px;
+    width: 25px;
+}
+
 .selected::after {
     content:'';
     position: absolute;
@@ -222,7 +241,8 @@ main {
 .company-details {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: space-around;
+    padding: 10px 20px 0px;
 }
 
 .img-holder {

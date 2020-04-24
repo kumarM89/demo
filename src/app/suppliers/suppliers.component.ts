@@ -12,12 +12,12 @@ export class SuppliersComponent implements OnInit {
   overviewTiles = [
     { title: 'Enrollment Initiated', value: '25000', percent: '48', icon: 'arrow_downward', color: 'yellow', isSelected: true },
     { title: 'Active', value: '22000', percent: '42', icon: 'arrow_upward', color: 'green' },
-    { title: 'Enrollment Pending', value: '4800', percent: '42', icon: 'arrow_upward', color: 'blue' },
-    { title: 'Activation Pending', value: '25000', percent: '35', icon: 'arrow_downward', color: 'red' }
+    { title: 'Enrollment Pending', value: '2500', percent: '42', icon: 'arrow_upward', color: 'blue' },
+    { title: 'Validation Pending', value: '500', percent: '35', icon: 'arrow_downward', color: 'red' }
   ]
 
   gridViewData = [
-    {name: 'Walmart', email: 'walmart@comapp.com', contact: '18156850566', logo: 'walmart-t', location: '1919 Davis St, San Leandro, CA 94577', isSelected: true },
+    {name: 'Globex Corporation', email: 'gbcorp@comapp.com', contact: '18156850566', logo: 'w-t1', location: '1919 Davis St, San Leandro, CA 94577', isSelected: true },
     {name: 'Target', email: 'sherry@socialheit.com', contact: '4567898765', logo: 'target', location: '', isSelected: false },
     {name: 'Amazon', email: 'jk@amazon.com', contact: '185-656-5656', logo: 'amazon', location: 'New York, NY, USA', isSelected: false },
     {name: 'Costco', email: 'custservice@costco.com', contact: '5313337559', logo: 'costco', location: 'Wyvern Way, Derby DE21, UK', isSelected: false },

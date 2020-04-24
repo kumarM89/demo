@@ -1,0 +1,9 @@
+main {
+    padding: 20px;
+}
+
+.report-parameters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

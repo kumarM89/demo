@@ -205,6 +205,11 @@
   margin-right: 5px;
 }
 
+.example-element-row td:first-child {
+    color: #4bb8b0;
+    font-weight: bold;
+}
+
 .from-last-month {
   color: #999999;
   font-family: Lato;
@@ -217,7 +222,11 @@
   color: #fff
 }
 
-.selected .body-text, .selected .from-last-month, .card:hover .body-text, .card:hover .from-last-month {
+.selected .body-text,
+.selected .from-last-month,
+.card:hover .body-text,
+.card:hover .from-last-month,
+.card:hover .arrow {
   color: #fff;
 }
 

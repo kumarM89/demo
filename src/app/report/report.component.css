@@ -1,44 +1,65 @@
-.container{
-    margin: 1.5vw;
+.container {
+    padding: 20px;
 }
+
 .cardHeader{
     font-family: Lato;
-    font-weight: 900;
-    font-size: 1.5em;
-  }
-  .m10{
-    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
 }
-.flex-container {
-    display: flex;
-    align-items: stretch;
-  }
-  .mat-button-toggle {
-    color: #4BB8B0;
-    height: 30px;
-    font-family: 'Nunito Semibold', sans-serif;
-    font-size: 10px;
-    font-style: bold;
-  }
-  ::ng-deep .mat-button-toggle-label-content {
-    margin-top: -3px ;
-  }
-  .mat-button-toggle-checked{
-    background-color: #4BB8B0;
-    color: white;
-  }
-  .flex-item {
-    text-align: left;
-    line-height: 75px;
-    font-size: 30px;
-  }
-  .flex-container2 {
-    display: flex;
-    flex-wrap: wrap;
 
-  }
-  .chartDiv{
-    width: 90%; 
-    height: 250px; 
-    display: block;
+.added-height {
+    line-height: 2;
+}
+
+.report-parameters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.column-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column-selected {
+    width: 15%;
+    margin-top: 8px;
+    color: #4bb8b0;
+    border-color: #4bb8b0;
+}
+
+.preview {
+    background: #4BB8B0;
+    width: 15%;
+    color: #fff;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mg-r-20 {
+    margin-right: 20px;
+}
+
+.ln-h-3 {
+    line-height: 3;
+}
+
+.inline {
+    display: inline;
+}
+
+.pd-l-10 {
+    padding: 0 0 0 10px;
+}
+
+.pd-l-2 {
+    padding: 0 0 0 2px;
 }
