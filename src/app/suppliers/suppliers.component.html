@@ -19,9 +19,6 @@
 
     <div class="suppliers-view">
         <mat-card>
-            <mat-card-title>
-
-            </mat-card-title>
             <mat-card-content>
                 <mat-icon title="Grid view" aria-hidden="false" (click)="view='grid'" class="clickable content-lg">
                     grid_on</mat-icon>
@@ -35,11 +32,10 @@
                     <div class='suppliers-card-container' *ngIf="view === 'grid'">
                         <div *ngFor="let supplier of gridViewData">
                             <mat-card class="card-details" [ngClass]="{'selected': supplier.isSelected}">
-
                                 <mat-icon class="dot-style">more_horiz</mat-icon>
-                                <mat-card-title class="text-center no-margin">
+                                <div class="suppliers-logo">
                                     <img src="assets/images/{{supplier.logo}}.png" class="supplier-icon" />
-                                </mat-card-title>
+                                </div>
                                 <mat-card-content class="text-center">
                                     <p class="content-sm">{{supplier.name}}</p>
                                     <div class="tile-content-value content-xs">
@@ -59,8 +55,10 @@
                     <div class="view" *ngIf="view === 'list'">
                         <table mat-table [dataSource]="gridViewData" class="mat-elevation-z8 suppliers-table">
                             <ng-container matColumnDef="name">
-                                <th mat-header-cell *matHeaderCellDef class="table-header-title"> Name </th>
-                                <td mat-cell *matCellDef="let element" class="table-row-title"> {{element.name}} </td>
+                                <th mat-header-cell *matHeaderCellDef class="table-header-title" style="width: 30%;">
+                                    Name </th>
+                                <td mat-cell *matCellDef="let element" class="table-row-title" style="width: 20%;">
+                                    {{element.name}} </td>
                             </ng-container>
 
                             <ng-container matColumnDef="email">
@@ -75,8 +73,10 @@
                             </ng-container>
 
                             <ng-container matColumnDef="location">
-                                <th mat-header-cell *matHeaderCellDef class="table-header-title"> Location </th>
-                                <td mat-cell *matCellDef="let element" class="table-row-title"> {{element.location}}
+                                <th mat-header-cell *matHeaderCellDef class="table-header-title" style="width: 20%;">
+                                    Supplier Id </th>
+                                <td mat-cell *matCellDef="let element" class="table-row-title" style="width: 20%;">
+                                    {{element.supplier_id}}
                                 </td>
                             </ng-container>
 
@@ -91,7 +91,7 @@
                             <mat-tab label="Company">
                                 <div class="company-details">
                                     <div class="img-holder">
-                                        <p>EJ</p>
+                                        <img src="assets/images/changemedia.png" style="width: 62px;" />
                                     </div>
                                     <div>
                                         <div>
@@ -101,7 +101,7 @@
                                         <div>
                                             <mat-icon aria-hidden="false" class="content-xs green">trip_origin
                                             </mat-icon>
-                                            <span class="content-sm green">Validated</span>
+                                            <span class="content-sm" style="color: green;">Validated</span>
                                         </div>
                                         <div>
                                             <mat-icon aria-hidden="false" class="content-sm">phone</mat-icon>
@@ -112,28 +112,56 @@
                                 <h4 class="payee-info-title">Payee Information</h4>
                                 <div class="info-container">
                                     <div class="info-container-body">
-                                        <p class="info-body-text">Payee ID: <span
-                                                class="info-body-bold-text">WM005000</span></p>
-                                        <p class="info-body-text">Payment Type: <span class="info-body-bold-text">Paper
-                                                Cheque</span></p>
-                                        <p class="info-body-text">Campaign Status: <span
-                                                class="info-body-bold-text">Initiated</span></p>
-                                        <p class="info-body-text">Email Address: <span
-                                                class="info-body-bold-text">kantihadiyal@gmail.com</span></p>
+                                        <div class="info-container-body-div">
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-text">Payee ID:</p>
+                                            </div>
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-bold-text">WM005000</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-container-body-div">
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-text">Payment Type:</p>
+                                            </div>
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-bold-text">Paper Cheque</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-container-body-div">
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-text">Campaign Status:</p>
+                                            </div>
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-bold-text">Initiated</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-container-body-div">
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-text">Email Address:</p>
+                                            </div>
+                                            <div class="info-container-body-div-inner">
+                                                <p class="info-body-bold-text">kantihadiyal@gmail.com</p>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="info-button-container">
-                                        <button class="info-button" mat-raised-button color="primary">
-                                            <mat-icon class="content-sm">lock</mat-icon>
+                                        <button class="info-button" mat-raised-button>
+                                            <mat-icon style="color: #fff;" class="content-sm">lock</mat-icon>
                                         </button>
-                                        <button class="info-button" mat-raised-button color="primary">
-                                            <mat-icon class="content-sm">lock_open</mat-icon>
+                                        <button class="info-button" mat-raised-button>
+                                            <mat-icon style="color: #fff;" class="content-sm">lock_open</mat-icon>
                                         </button>
-                                        <button class="info-button" mat-raised-button color="primary">
-                                            <mat-icon class="content-sm">power_settings_new</mat-icon>
+                                        <button class="info-button" mat-raised-button>
+                                            <mat-icon style="color: #fff;" class="content-sm">power_settings_new
+                                            </mat-icon>
                                         </button>
-                                        <button class="info-button" mat-raised-button color="primary">
-                                            <mat-icon class="content-sm">info</mat-icon>
+                                        <button class="info-button" mat-raised-button>
+                                            <mat-icon style="color: #fff;" class="content-sm">info</mat-icon>
                                         </button>
                                     </div>
                                 </div>
