@@ -86,6 +86,10 @@ export class ReportComponent implements OnInit {
     this.reportCharts.setOptions(this.reportCharts.theme);
   }
 
+  removeSelection(elm) {
+    debugger
+  }
+
   handleClick(){
     if(!this.showFilter)
       this.showFilter = true;

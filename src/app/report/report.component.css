@@ -1,230 +1,65 @@
-.container{
-    margin: 1.5vw;
-}
-.cardHeader{
-    font-family: Lato;
-    font-weight: 900;
-    font-size: 1.5em;
-  }
-  .m10{
-    margin-top: 10px;
-}
-.flex-container {
-    display: flex;
-    align-items: stretch;
-  }
-  .mat-button-toggle {
-    color: #4BB8B0;
-    height: 30px;
-    font-family: 'Nunito Semibold', sans-serif;
-    font-size: 10px;
-    font-style: bold;
-  }
-  ::ng-deep .mat-button-toggle-label-content {
-    margin-top: -3px ;
-  }
-  .mat-button-toggle-checked{
-    background-color: #4BB8B0;
-    color: white;
-  }
-  .flex-item {
-    text-align: left;
-    line-height: 75px;
-    font-size: 30px;
-  }
-  .flex-container2 {
-    display: flex;
-    flex-wrap: wrap;
-
-  }
-  .chartDiv{
-    width: 90%; 
-    height: 250px; 
-    display: block;
-}
-
-
-
-
-
-
-main {
+.container {
     padding: 20px;
 }
 
-.card-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.suppliers-overview {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.tile-title {
-    font-weight: 600;
-    text-align: center;
-}
-
-.tile-card-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.arrow-icon {
-    height: 15px;
-}
-
-.card { 
-    border: solid 1px #1ed2c5;
-    box-shadow: none;
-    width: calc((100% - 80px)/ 4);
-    margin: 0 0 20px;
-    min-width: 200px;
-}
-  
-.from-last-month {
-    color: #999999;
+.cardHeader{
     font-family: Lato;
-    font-size: 11px;
-    text-align: center;
-}
-
-.body-text {
-    font-family: Lato;
-    font-size: 18px;
-}
-
-.overview-tiles {
-    flex: 1 1 100%;
-    margin: 0 10px;
+    font-weight: bold;
     font-size: 16px;
 }
 
-.text-center {
-    text-align: center;
+.added-height {
+    line-height: 2;
 }
 
-.margin-top-10  {
-    margin-top: 10px;
-}
-
-.tile-content-value, .suppliers-data{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tile-content-value span {
-    padding-left: 5px;
-}
-
-.supplier-icon {
-    width: 40px;
-}
-
-.clickable {
-    cursor: pointer;
-    padding: 0 10px;
-    color: #333c4b;
-}
-
-.suppliers-table {
-    margin: 10px 0;
-    width: 100%;
-}
-
-.header-row {
-    height: 35px;
-    background: #333c4b;
-}
-
-.header-row th {
-    color: white;
-}
-
-.right {
-    float: right;
-    font-weight: bold;
-    color: #4bb8b0;
-}
-
-.data-row {
-    height: 30px;
-    background: #f2f6fa;
-}
-
-.no-margin {
-    margin: 0;
-}
-
-.view {
-    flex: 6;
-}
-
-.information {
-    flex: 3;
-    margin: 0 10px;
-}
-
-::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
-    min-width: 0 !important;
-    padding: 3px !important;
-    margin: 3px !important;
-}
-
-.card-details {
+.report-parameters {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
-    cursor: pointer;
 }
 
-.card-details:hover, .selected {
-    border: 1px solid #4bb8b0;
+.column-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column-selected {
+    width: 15%;
+    margin-top: 8px;
+    color: #4bb8b0;
+    border-color: #4bb8b0;
+}
+
+.preview {
+    background: #4BB8B0;
+    width: 15%;
     color: #fff;
 }
 
-.card-details:hover, .data-row:hover, .selected {
-    background: #4bb8b0;
-}
-
-.data-row:hover td, .selected td {
-    color: #fff;
-}
-
-.center {
+.filter-row {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.company-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 20px;
+.mg-r-20 {
+    margin-right: 20px;
 }
 
-.info-container {
-    padding: 0 40px;
+.ln-h-3 {
+    line-height: 3;
 }
 
-.user-pic {
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
+.inline {
+    display: inline;
 }
 
-.info-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.pd-l-10 {
+    padding: 0 0 0 10px;
+}
+
+.pd-l-2 {
+    padding: 0 0 0 2px;
 }
