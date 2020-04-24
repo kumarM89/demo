@@ -25,6 +25,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HttpClientModule } from "@angular/common/http";
 import { HomeModule } from './modules/home/home.module';
 import { LoginComponent } from './login/login.component';
@@ -42,6 +43,7 @@ import { CampaignProgressComponent } from './shared/campaign-progress/campaign-p
 import { AwaitingApprovalComponent } from './shared/awaiting-approval/awaiting-approval.component';
 import { FileComponent } from './file/file.component';
 import { ReportComponent } from './report/report.component';
+import { ReportBuilderComponent } from './report-builder/report-builder.component';
 
 @NgModule({
   declarations: [
@@ -57,12 +59,14 @@ import { ReportComponent } from './report/report.component';
     CampaignProgressComponent,
     AwaitingApprovalComponent,
     FileComponent,
-    ReportComponent
+    ReportComponent,
+    ReportBuilderComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot(),
     HighchartsChartModule,
     MatListModule,
     MatCardModule,

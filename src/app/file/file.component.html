@@ -6,7 +6,10 @@
             </mat-card-title>
             <mat-card-content>
                 <div class="tile-card-body">
-                    <img class='arrow-icon' src="assets/images/arrow-up-green.svg">
+                    <!-- <img class='arrow-icon' src="assets/images/arrow-up-green.svg"> -->
+                    <mat-icon aria-hidden="false"
+                        class="selected arrow"
+                    >arrow_upward</mat-icon>
                     <p class="green body-text">1000</p>
                 </div>
                 <p class="from-last-month">20% From Last Month</p>
@@ -19,7 +22,10 @@
             </mat-card-title>
             <mat-card-content>
                 <div class="tile-card-body">
-                    <img class='arrow-icon' src="assets/images/arrow-up-green.svg">
+                    <!-- <img class='arrow-icon' src="assets/images/arrow-up-green.svg"> -->
+                    <mat-icon aria-hidden="false"
+                        class="green arrow"
+                    >arrow_upward</mat-icon>
                     <p class="green body-text">900</p>
                 </div>
                 <p class="from-last-month">20% From Last Month</p>
@@ -32,7 +38,10 @@
             </mat-card-title>
             <mat-card-content>
                 <div class="tile-card-body">
-                    <img class='arrow-icon' src="assets/images/arrow-up-green.svg">
+                    <!-- <img class='arrow-icon' src="assets/images/arrow-up-green.svg"> -->
+                    <mat-icon aria-hidden="false"
+                        class="green arrow"
+                    >arrow_upward</mat-icon>
                     <p class="green body-text">80</p>
                 </div>
                 <p class="from-last-month">20% From Last Month</p>
@@ -45,7 +54,10 @@
             </mat-card-title>
             <mat-card-content>
                 <div class="tile-card-body">
-                    <img class='arrow-icon' src="assets/images/arrow-down-red.svg">
+                    <!-- <img class='arrow-icon' src="assets/images/arrow-down-red.svg"> -->
+                    <mat-icon aria-hidden="false"
+                        class=" red arrow"
+                    >arrow_downward</mat-icon>
                     <p class="red body-text">20</p>
                 </div>
                 <p class="from-last-month">20% From Last Month</p>
@@ -69,7 +81,7 @@
                             <div>
                                 <mat-horizontal-stepper class='stepper-container' labelPosition="bottom" #stepper>
                                     <mat-step class='mat-label'>
-                                        <ng-template matStepLabel>Status below Initiated</ng-template>
+                                        <ng-template matStepLabel>Initiated</ng-template>
                                     </mat-step>
                                     <mat-step>
                                         <ng-template matStepLabel>Processing</ng-template>
@@ -78,13 +90,10 @@
                                         <ng-template matStepLabel>Processed</ng-template>
                                     </mat-step>
                                     <mat-step>
-                                        <ng-template matStepLabel>ACH Disbursed</ng-template>
+                                        <ng-template matStepLabel>Waiting Approval</ng-template>
                                     </mat-step>
                                     <mat-step>
-                                        <ng-template matStepLabel>ACH Accepted</ng-template>
-                                    </mat-step>
-                                    <mat-step>
-                                        <ng-template matStepLabel>ACH Returned</ng-template>
+                                        <ng-template matStepLabel>Approved</ng-template>
                                     </mat-step>
                                 </mat-horizontal-stepper>
 

@@ -32,6 +32,9 @@ div.mat-list-item-content, .mat-list-text {
     font-size: 10px;
 }
 
+.mat-tab-body-content {
+    overflow: hidden !important;
+}
 
 .status-container .mat-step-icon-content .ng-star-inserted {
     display: none !important;

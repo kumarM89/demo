@@ -15,22 +15,23 @@ export class AppComponent {
   title: string;
   navigationOpened: boolean = true;
   dateValues = [
-    { value: 'Last Year', viewValue: 'Last Year' },
-    { value: 'Last 3 Years', viewValue: 'Last 3 Years' },
-    { value: 'Last 5 Years', viewValue: 'Last 5 Years' }
+    { value: 'Yearly', viewValue: 'Yearly' },
+    { value: 'Monthly', viewValue: 'Monthly' },
+    { value: 'Last Year', viewValue: 'Last Year' }
   ];
+  selected = "Last Year"
   navigationList = [
     { title: 'Dashboard', link: 'home', icon: 'dashboard' },
     { title: 'Payments', link: 'payments', icon: 'attach_money' },
     { title: 'Files', link: 'files', icon: 'file_copy' },
     { title: 'Suppliers', link: 'suppliers', icon: 'person_pin' },
-    { title: 'Reporting', link: 'reporting', icon: 'insert_chart', isMulti: true },
-    { title: 'Report Builder', link: 'report', icon: 'insert_chart', parent: 'reporting', isVisible: false },
+    { title: 'Reporting', link: 'reporting', icon: 'pie_chart', isMulti: true },
+    { title: 'Report Builder', link: 'report', icon: 'image_search', parent: 'reporting', isVisible: false },
     { title: 'Existing Report', link: 'existingReport', icon: 'insert_chart', parent: 'reporting', isVisible: false },
     { title: 'Profile', link: 'profile', icon: 'person' },
     { title: 'Configuration', link: 'configuration', icon: 'settings', isMulti: true },
-    { title: 'Payment', link: 'paymentConfig', icon: 'settings', parent: 'configuration', isVisible: false },
-    { title: 'Files', link: 'filesConfig', icon: 'settings', parent: 'configuration', isVisible: false }
+    { title: 'Payment', link: 'paymentConfig', icon: 'money', parent: 'configuration', isVisible: false },
+    { title: 'Files', link: 'filesConfig', icon: 'create_new_folder', parent: 'configuration', isVisible: false }
   ];
   navList = [
     {

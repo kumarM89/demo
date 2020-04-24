@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
 @Component({
-  selector: 'app-report',
-  templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css']
+  selector: 'app-report-builder',
+  templateUrl: './report-builder.component.html',
+  styleUrls: ['./report-builder.component.css']
 })
-export class ReportComponent implements OnInit {
+export class ReportBuilderComponent implements OnInit {
   dataType = [
     {value: 'payment', viewValue: 'Payment'},
     {value: 'supplier', viewValue: 'Supplier'},
@@ -37,7 +37,6 @@ export class ReportComponent implements OnInit {
   reportChartOptions ={};   
   reportData = [];
   showFilter: Boolean = false;
-
   constructor() { }
 
   ngOnInit(): void {
