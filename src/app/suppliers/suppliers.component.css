@@ -118,10 +118,31 @@ main {
     color: #333c4b;
 }
 
-.suppliers-table {
-    margin: 10px 20px;
-    width: 95%;
+table {
+    width: 100%;
 }
+
+.suppliers-table {
+    padding: 20px;
+    margin-right: 20px;
+}
+
+
+
+.suppliers-table .table-header-title {
+    font-size: 14px;
+    color: #000 !important;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 25%;
+    text-align: center;
+    background-color: #fff ;
+}
+.suppliers-table .table-row-title {
+    font-size: 14px;
+    text-align: center;
+  }
+
 
 .header-row {
     height: 35px;
@@ -155,6 +176,7 @@ main {
     max-width: 35%;
     padding: 20px;
     min-height: 441px;
+    margin-left: 20px;
 }
 
 ::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
@@ -340,10 +362,11 @@ main {
 }
 
 .contact-card {
-    width: 235px;
+    width: 150px;
     border-radius: 0 !important;
     padding: 10px 15px;
-    margin: 15px auto;
+    margin: 15px 0;
+    border: solid 1px #ddd;
 }
 
 

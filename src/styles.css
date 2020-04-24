@@ -62,3 +62,9 @@ div.mat-list-item-content, .mat-list-text {
     color: #999999 !important;
     font-weight: 500 !important;
 }
+
+
+/* .suppliers-table tbody tr:hover td, .suppliers-table tbody tr:hover th {
+    background-color: #ebf1f7 !important;
+    color: #000 !important;
+} */
