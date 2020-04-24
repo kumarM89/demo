@@ -10,6 +10,14 @@ main {
     justify-content: space-between;
 }
 
+.suppliers-card-container {
+    max-width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .suppliers-overview {
     display: flex;
     align-items: center;
@@ -81,10 +89,18 @@ main {
     margin-top: 10px;
 }
 
-.tile-content-value, .suppliers-data{
+.tile-content-value{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.suppliers-data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
 .tile-content-value span {
@@ -93,6 +109,7 @@ main {
 
 .supplier-icon {
     width: 40px;
+    margin: 10px 0;
 }
 
 .clickable {
@@ -135,8 +152,9 @@ main {
 }
 
 .information {
-    flex: 3;
-    margin: 0 10px;
+    max-width: 35%;
+    padding: 20px;
+    min-height: 441px;
 }
 
 ::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
@@ -146,11 +164,24 @@ main {
 }
 
 .card-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+    width: 150px;
+    height: 140px;
     cursor: pointer;
+    box-shadow: none;
+    border-radius: 0;
+    border: solid 0.5px #ddd;
+    position: relative;
+}
+
+
+.card-details:hover .suppliers-name, .selected {
+    color: #fff;
+}
+
+.dot-style {
+    position: absolute;
+    right: 3px;
+    top: -2px;
 }
 
 .card-details:hover, .selected, .card:hover {
@@ -191,13 +222,55 @@ main {
 .company-details {
     display: flex;
     align-items: center;
-    justify-content: space-around;
     padding: 10px 20px;
 }
 
-.info-container {
-    padding: 0 40px;
+.img-holder {
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    border: solid 1px #ddd;
+    border-radius: 100%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.payee-info-title {
+    font-size: 16px;
+    color: #333c4b;
+    font-weight: 600;
+    margin: 15px 0 !important;
+    text-align: center;
+}
+
+
+.info-container {
+    
+}
+
+.info-container-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.info-body-text {
+    font-size: 13px;
+    color: #999999;
+    font-weight: 500;
+    font-family: "Loto";
+}
+
+.info-body-bold-text {
+    color: #333c4b;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
 
 .user-pic {
     width: 70px;
@@ -209,4 +282,62 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.info-container-footer {
+    width: 220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-button {
+    border-radius: 0 !important;
+}
+
+.info-container-footer .mat-icon {
+    font-size: 14px !important;
+    height: 13px !important;
+    width: 13px !important;
+    padding-right: 0 !important;
+}
+
+.info-container-footer button{
+    min-width: 47px !important;
+}
+
+.contact-img-holder {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: solid 1px #ddd;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px;
+}
+
+.contact-card {
+    width: 235px;
+    border-radius: 0 !important;
+    padding: 10px 15px;
+    margin: 15px auto;
+}
+
+
+.contact-card-title {
+    font-size: 10px;
+    color: #333c4b;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.card-info-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -6px;
 }

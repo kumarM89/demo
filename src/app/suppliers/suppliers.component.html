@@ -1,56 +1,59 @@
 <main>
     <div class="card-container">
-        <mat-card class="card"  *ngFor="let tile of overviewTiles"
-        [ngClass]="{'selected': tile.isSelected}"
-        >
+        <mat-card class="card" *ngFor="let tile of overviewTiles" [ngClass]="{'selected': tile.isSelected}">
             <mat-card-title>
                 <h3 class="mat-h3 tile-title">{{tile.title}}</h3>
             </mat-card-title>
             <mat-card-content>
                 <div class="tile-card-body">
                     <!-- <img class='arrow-icon' src="assets/images/arrow-up-green.svg"> -->
-                    <mat-icon aria-hidden="false" class="{{tile.color}} arrow" [ngClass]="{'selected': tile.isSelected}">{{tile.icon}}</mat-icon>
+                    <mat-icon aria-hidden="false" class="{{tile.color}} arrow"
+                        [ngClass]="{'selected': tile.isSelected}">{{tile.icon}}</mat-icon>
                     <p class="{{tile.color}} body-text" [ngClass]="{'selected': tile.isSelected}">{{tile.value}}</p>
                 </div>
-                <p class="from-last-month" [ngClass]="{'selected': tile.isSelected}">{{tile.percent}}% From Last Month</p>
+                <p class="from-last-month" [ngClass]="{'selected': tile.isSelected}">{{tile.percent}}% From Last Month
+                </p>
             </mat-card-content>
         </mat-card>
     </div>
 
     <div class="suppliers-view">
         <mat-card>
-            <mat-card-title>
-                
-            </mat-card-title>
             <mat-card-content>
-                <mat-icon title="Grid view" aria-hidden="false" (click)="view='grid'" class="clickable content-lg">dashboard</mat-icon>
-                <mat-icon title="List view" aria-hidden="false" (click)="view='list'" class="clickable content-lg">list</mat-icon>
+                <mat-icon title="Grid view" aria-hidden="false" (click)="view='grid'" class="clickable content-lg">
+                    dashboard</mat-icon>
+                <mat-icon title="List view" aria-hidden="false" (click)="view='list'" class="clickable content-lg">list
+                </mat-icon>
                 <mat-icon title="Search" aria-hidden="false" class="clickable content-lg right">search</mat-icon>
                 <mat-icon title="Filter" aria-hidden="false" class="clickable content-lg right">filter_list</mat-icon>
+
+
                 <div class="suppliers-data">
-                    <div class="view" *ngIf="view === 'grid'">
-                        <mat-grid-list cols="3" rowHeight="2:1">
-                            <mat-grid-tile *ngFor="let supplier of gridViewData">
-                                <mat-card class="card-details" [ngClass]="{'selected': supplier.isSelected}">
-                                    <mat-card-title class="text-center no-margin">
-                                        <img src="assets/images/{{supplier.logo}}.png" class="supplier-icon" />
-                                    </mat-card-title>
-                                    <mat-card-content class="text-center">
-                                        <div class="content-sm"><b>{{supplier.name}}</b></div>
-                                        <div class="tile-content-value content-xs">
-                                            <mat-icon aria-hidden="false" class="center content-xs">email</mat-icon>
-                                            <span class="content-xs">{{supplier.email}}</span>
-                                        </div>
-                                        <div class="tile-content-value content-xs">
-                                            <mat-icon aria-hidden="false" class="center content-xs">phone</mat-icon>
-                                            <span class="content-xs">{{supplier.contact}}</span>
-                                        </div>
-                                    </mat-card-content>
-                                </mat-card>
-                            </mat-grid-tile>
-                        </mat-grid-list>
+                    <div class='suppliers-card-container'>
+                        <div *ngFor="let supplier of gridViewData">
+                            <mat-card class="card-details" [ngClass]="{'selected': supplier.isSelected}">
+
+                                <mat-icon class="dot-style">more_horiz</mat-icon>
+                                <mat-card-title class="text-center no-margin">
+                                    <img src="assets/images/{{supplier.logo}}.png" class="supplier-icon" />
+                                </mat-card-title>
+                                <mat-card-content class="text-center">
+                                    <p class="content-sm">{{supplier.name}}</p>
+                                    <div class="tile-content-value content-xs">
+                                        <mat-icon aria-hidden="false" class="center content-xs"
+                                            style="height: 20px; padding-right: 5px;">
+                                            email</mat-icon>
+                                        <span class="content-xs">{{supplier.email}}</span>
+                                    </div>
+                                    <div class="tile-content-value content-xs">
+                                        <mat-icon aria-hidden="false" class="center content-xs">phone</mat-icon>
+                                        <span class="content-xs">{{supplier.contact}}</span>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
                     </div>
-                    <div class="view" *ngIf="view === 'list'">
+                    <!-- <div class="view" *ngIf="view === 'list'">
                         <table mat-table [dataSource]="gridViewData" class="mat-elevation-z8" class="suppliers-table">
                             <ng-container matColumnDef="name">
                                 <th mat-header-cell *matHeaderCellDef class="content-md"> Name </th>
@@ -73,55 +76,47 @@
                             </ng-container>
 
                             <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
-                            <tr mat-row class="data-row"
-                                *matRowDef="let row; columns: displayedColumns;"
-                                [ngClass]="{'selected': row.isSelected}"
-                            ></tr>
+                            <tr mat-row class="data-row" *matRowDef="let row; columns: displayedColumns;"
+                                [ngClass]="{'selected': row.isSelected}"></tr>
                         </table>
-                    </div>
-                    <mat-divider [vertical]="true" [ngStyle]="{'height':'250px'}"></mat-divider>
-                    <div class="information">
+                    </div> -->
+
+                    <mat-card class="information">
                         <mat-tab-group>
                             <mat-tab label="Company">
                                 <div class="company-details">
-                                    <div>
-                                        <img src="assets/images/User.png" class="user-pic" />
+                                    <div class="img-holder">
+                                        <p>EJ</p>
                                     </div>
-                                    <div style="line-height: 1;">
-                                        <div class="content-sm">
+                                    <div>
+                                        <div>
                                             <mat-icon aria-hidden="false" class="content-xs red">location_on</mat-icon>
-                                            <span></span>
+                                            <span class="content-sm"></span>
                                         </div>
-                                        <div class="content-sm">
-                                            <mat-icon aria-hidden="false" class="content-xs green">trip_origin</mat-icon>
-                                            <span class="content-sm">Validated</span>
+                                        <div>
+                                            <mat-icon aria-hidden="false" class="content-xs green">trip_origin
+                                            </mat-icon>
+                                            <span class="content-sm green">Validated</span>
                                         </div>
-                                        <div class="content-sm">
+                                        <div>
                                             <mat-icon aria-hidden="false" class="content-sm">phone</mat-icon>
                                             <span class="content-sm">892-134-1515</span>
                                         </div>
                                     </div>
                                 </div>
-                                <mat-divider></mat-divider>
-                                <h4 class="text-center"><b>Payee Information</b></h4>
+                                <h4 class="payee-info-title">Payee Information</h4>
                                 <div class="info-container">
-                                    <div class="info-header">
-                                        <div class="content-sm">Payee ID:</div>
-                                        <div class="content-sm">WM005000</div>
+                                    <div class="info-container-body">
+                                        <p class="info-body-text">Payee ID: <span
+                                                class="info-body-bold-text">WM005000</span></p>
+                                        <p class="info-body-text">Payment Type: <span class="info-body-bold-text">Paper
+                                                Cheque</span></p>
+                                        <p class="info-body-text">Campaign Status: <span
+                                                class="info-body-bold-text">Initiated</span></p>
+                                        <p class="info-body-text">Email Address: <span
+                                                class="info-body-bold-text">kantihadiyal@gmail.com</span></p>
                                     </div>
-                                    <div class="info-header">
-                                        <div class="content-sm">Payment Type:</div>
-                                        <div class="content-sm">Paper Cheque</div>
-                                    </div>
-                                    <div class="info-header">
-                                        <div class="content-sm">Campaign Status:</div>
-                                        <div class="content-sm">Initiated</div>
-                                    </div>
-                                    <div class="info-header">
-                                        <div class="content-sm">Email Address:</div>
-                                        <div class="content-sm">kantihadiyal@gmail.com</div>
-                                    </div>
-                                    <div class="">
+                                    <div class="info-container-footer">
                                         <button mat-raised-button color="primary">
                                             <mat-icon>lock</mat-icon>
                                         </button>
@@ -138,33 +133,35 @@
                                 </div>
                             </mat-tab>
                             <mat-tab label="Contact">
-                                <mat-card>
-                                    <mat-card-title class="text-center no-margin">
-                                        <img src="assets/images/User.png" class="user-pic" />
-                                    </mat-card-title>
-                                    <mat-card-content>
-                                        <div class="tile-content-value content-xs">Emma Jacob</div>
-                                        <div class="tile-content-value content-xs">CEO</div>
-                                        <div class="tile-content-value content-xs">Others</div>
-                                        <div class="tile-content-value content-xs">
-                                            <mat-icon aria-hidden="false" class="center content-xs">email</mat-icon>
-                                            <span class="content-xs">emma@acme.com</span>
-                                        </div>
-                                        <div class="tile-content-value content-xs">
-                                            <mat-icon aria-hidden="false" class="center content-xs">phone</mat-icon>
-                                            <span class="content-xs">888-888-8888</span>
-                                        </div>
-                                        <div class="tile-content-value content-xs">
-                                            <mat-icon aria-hidden="false" class="center content-xs">location_on</mat-icon>
-                                            <span class="content-xs">154 Summit St, Newark, NJ 07102, USA</span>
-                                        </div>
-                                    </mat-card-content>
+                                <mat-card class='contact-card'>
+                                    <div class="contact-img-holder">
+                                        <p>EJ</p>
+                                    </div>
+                                    <div>
+                                        <p class="contact-card-title">Emma Jacob</p>
+                                        <p class="contact-card-title">CEO</p>
+                                        <p class="contact-card-title">Others</p>
+                                        <p class="contact-card-title">
+                                    </div>
+                                    <div class="card-info-holder">
+                                        <mat-icon aria-hidden="false" class="center content-xs">email</mat-icon>
+                                        <span class="content-xs">emma@acme.com</span>
+                                    </div>
+                                    <div class="card-info-holder">
+                                        <mat-icon aria-hidden="false" class="center content-xs">phone</mat-icon>
+                                        <span class="content-xs" style="color: blue">888-888-8888</span>
+                                    </div>
+                                    <div class="card-info-holder">
+                                        <mat-icon aria-hidden="false" class="center content-xs">location_on
+                                        </mat-icon>
+                                        <span class="content-xs">154 Summit St, Newark, NJ 07102, USA</span>
+                                    </div>
                                 </mat-card>
                             </mat-tab>
                             <mat-tab label="Location"> location details </mat-tab>
                             <mat-tab label="Payment"> payment details </mat-tab>
                         </mat-tab-group>
-                    </div>
+                    </mat-card>
                 </div>
             </mat-card-content>
         </mat-card>
